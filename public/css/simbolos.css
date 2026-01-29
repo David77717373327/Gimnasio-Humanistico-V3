@@ -1,0 +1,871 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    --dark-blue: #264653;
+    --deep-blue: #003366;
+    --soft-blue: #07346e;
+    --slate-blue: #3A506B;
+    --light-blue: #E0ECF7;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+/* ============================================
+   RESET Y BASE
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+
+/* ============================================
+   SECCIÓN HIMNO
+============================================ */
+.himno-section {
+    margin-top: 30px;
+    padding: 55px 20px;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    position: relative;
+}
+
+.himno-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.himno-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.himno-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.himno-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 2px;
+}
+
+.himno-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: black;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* DISEÑO DE DOS COLUMNAS */
+.himno-main-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* COLUMNA IZQUIERDA: Video + Introducción */
+.himno-intro {
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    height: 100%;
+    width: 100%;
+    margin-left: 50px;
+}
+
+/* Contenedor del Video - SIN BORDES NEGROS */
+.himno-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 2.5rem;
+    
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: var(--primary-green);
+}
+
+.himno-video {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    border: none;
+    border-radius: 12px;
+}
+
+.himno-intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.himno-intro-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-green);
+    border-radius: 2px;
+}
+
+.himno-intro-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 0.98rem);
+    line-height: 1.7;
+    color: black;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.himno-intro-text:last-child {
+    margin-bottom: 0;
+}
+
+.himno-intro-text strong {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* COLUMNA DERECHA: Himno - REDUCIDA Y COMPACTA */
+.himno-content {
+    padding: 1.5rem;
+    border-radius: var(--border-radius-lg);
+    position: relative;
+}
+
+.himno-stanza {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.himno-stanza:last-child {
+    margin-bottom: 0;
+}
+
+.himno-stanza-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
+    font-weight: 1000;
+    color: var(--primary-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.7rem;
+}
+
+.himno-verse {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.88rem, 1.6vw, 0.95rem);
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 0.25rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .himno-main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .himno-intro {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .himno-video-wrapper {
+        margin-bottom: 2rem;
+        padding-bottom: 56.25%;
+    }
+    
+    .himno-video {
+        top: -3%;
+        left: -3%;
+        width: 106%;
+        height: 106%;
+    }
+}
+
+@media (max-width: 768px) {
+    .himno-container {
+        padding: 0 1.5rem;
+    }
+    
+    .himno-intro {
+        padding: 1.5rem;
+    }
+    
+    .himno-content {
+        padding: 1.5rem;
+    }
+    
+    .himno-verse {
+        font-size: clamp(0.9rem, 2vw, 0.98rem);
+        line-height: 1.7;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ============================================
+   SECCIÓN SÍMBOLOS
+============================================ */
+.simbolos-section {
+    margin-bottom: 0;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f3fcf6 0%, #f2f2f2 50%, #fafaf8 100%);
+}
+
+.simbolos-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 6rem;
+}
+
+.simbolos-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.simbolos-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.simbolos-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 2px;
+}
+
+.simbolo-item {
+    margin-bottom: 2rem;
+}
+
+.simbolo-row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 0;
+}
+
+.simbolo-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.simbolo-image-container {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.simbolo-image {
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    transition: transform var(--transition-normal);
+}
+
+.bandera-image {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.simbolo-content {
+    flex: 1;
+    text-align: left;
+}
+
+.simbolo-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.simbolo-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.simbolo-description:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - BREAKPOINTS PROGRESIVOS
+============================================ */
+
+/* Pantallas Extra Grandes (1400px - 1200px) */
+@media (max-width: 1400px) {
+    .himno-container,
+    .simbolos-container {
+        max-width: 1200px;
+        padding: 0 2.5rem;
+    }
+    
+    .himno-intro {
+        margin-left: 40px;
+        width: 90%;
+    }
+    
+    .bandera-image {
+        margin-left: 20px;
+    }
+}
+
+/* Laptops y Tablets Grandes (1200px - 992px) */
+@media (max-width: 1200px) {
+    .himno-container,
+    .simbolos-container {
+        max-width: 960px;
+        padding: 0 2rem;
+    }
+    
+    .himno-main-content {
+        gap: 2.5rem;
+    }
+    
+    .himno-intro {
+        margin-left: 20px;
+        width: 95%;
+    }
+    
+    .simbolo-row {
+        gap: 2.5rem;
+    }
+    
+    .simbolo-image {
+        width: 80%;
+    }
+}
+
+/* Tablets Landscape (992px - 768px) */
+@media (max-width: 992px) {
+    .himno-section {
+        padding: 3.5rem 20px;
+        margin-top: 60px;
+    }
+    
+    .simbolos-section {
+        padding: 3.5rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 1.5rem;
+    }
+    
+    .himno-main-content {
+        gap: 2rem;
+    }
+    
+    .himno-intro {
+        margin-left: 0;
+        width: 100%;
+        padding: 1.8rem;
+    }
+    
+    .himno-content {
+        padding: 1.8rem;
+    }
+    
+    .simbolos-header {
+        margin-bottom: 3.5rem;
+    }
+    
+    .simbolo-row,
+    .simbolo-row.reverse {
+        gap: 2rem;
+    }
+    
+    .simbolo-image {
+        width: 85%;
+    }
+    
+    .bandera-image {
+        margin-left: 0;
+    }
+}
+
+/* Tablets Portrait (768px - 576px) */
+@media (max-width: 768px) {
+    .himno-section {
+        padding: 3rem 15px;
+        margin-top: 50px;
+    }
+    
+    .simbolos-section {
+        padding: 3rem 0;
+    }
+    
+    .himno-container {
+        padding: 0 1rem;
+    }
+    
+    .simbolos-container {
+        padding: 0 1rem;
+    }
+    
+    .himno-header {
+        margin-bottom: 2rem;
+    }
+    
+    .simbolos-header {
+        margin-bottom: 2.5rem;
+    }
+    
+    /* CAMBIO A UNA COLUMNA */
+    .himno-main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 100%;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 1.5rem;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 1rem;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 1.3rem;
+    }
+    
+    /* Símbolos en columna */
+    .simbolo-row,
+    .simbolo-row.reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .simbolo-image-container {
+        flex: 1 1 auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .simbolo-image {
+        width: 60%;
+        max-width: 300px;
+    }
+    
+    .bandera-image {
+        width: 80%;
+        max-width: 400px;
+    }
+    
+    .simbolo-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .simbolo-description {
+        text-align: justify;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 3rem;
+    }
+}
+
+/* Móviles Large (576px - 480px) */
+@media (max-width: 576px) {
+    .himno-section {
+        padding: 2.5rem 10px;
+        margin-top: 40px;
+    }
+    
+    .simbolos-section {
+        padding: 2.5rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 0.8rem;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.8rem;
+    }
+    
+    .himno-title::after,
+    .simbolos-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 1.2rem;
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 1.2rem;
+    }
+    
+    .himno-intro-title::after {
+        width: 50px;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 1.2rem;
+    }
+    
+    .simbolo-image {
+        width: 70%;
+        max-width: 250px;
+    }
+    
+    .bandera-image {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Móviles Small (480px - 360px) */
+@media (max-width: 480px) {
+    .himno-section {
+        padding: 2rem 8px;
+        margin-top: 30px;
+    }
+    
+    .simbolos-section {
+        padding: 2rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 0.6rem;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 1rem;
+        border-radius: var(--border-radius-md);
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 1rem;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 0.8rem;
+        line-height: 1.65;
+    }
+    
+    .himno-verse {
+        line-height: 1.7;
+        margin-bottom: 0.25rem;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 1rem;
+    }
+    
+    .himno-stanza-title {
+        margin-bottom: 0.8rem;
+    }
+    
+    .simbolo-image {
+        width: 75%;
+        max-width: 220px;
+    }
+    
+    .bandera-image {
+        width: 95%;
+        max-width: 300px;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 2rem;
+    }
+    
+    .simbolo-name {
+        margin-bottom: 0.8rem;
+    }
+    
+    .simbolo-description {
+        line-height: 1.7;
+    }
+}
+
+/* Móviles Extra Small (360px y menores) */
+@media (max-width: 360px) {
+    .himno-section {
+        padding: 1.5rem 5px;
+        margin-top: 25px;
+    }
+    
+    .simbolos-section {
+        padding: 1.5rem 0;
+    }
+    
+    .himno-container,
+    .simbolos-container {
+        padding: 0 0.5rem;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.2rem;
+    }
+    
+    .himno-title::after,
+    .simbolos-title::after {
+        width: 50px;
+        height: 3px;
+    }
+    
+    .himno-intro,
+    .himno-content {
+        padding: 0.9rem;
+    }
+    
+    .himno-intro-title {
+        margin-bottom: 0.9rem;
+    }
+    
+    .himno-intro-title::after {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .himno-intro-text {
+        margin-bottom: 0.7rem;
+        line-height: 1.6;
+    }
+    
+    .himno-stanza {
+        margin-bottom: 0.9rem;
+    }
+    
+    .himno-stanza-title {
+        margin-bottom: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .himno-verse {
+        line-height: 1.6;
+        margin-bottom: 0.2rem;
+    }
+    
+    .simbolo-image {
+        width: 80%;
+        max-width: 200px;
+    }
+    
+    .bandera-image {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .simbolo-item {
+        margin-bottom: 1.8rem;
+    }
+    
+    .simbolo-name {
+        margin-bottom: 0.7rem;
+    }
+    
+    .simbolo-description {
+        line-height: 1.65;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* ============================================
+   HERO RESPONSIVE
+============================================ */
+.hero-title.auto-long {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-title.auto-short {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+/* ============================================
+   UTILIDADES ADICIONALES
+============================================ */
+
+/* Mejora de legibilidad en pantallas pequeñas */
+@media (max-width: 768px) {
+    .himno-intro-text,
+    .simbolo-description {
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+}
+
+/* Optimización de imágenes en dispositivos móviles */
+@media (max-width: 576px) {
+    .simbolo-image,
+    .bandera-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Accesibilidad táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+    .simbolo-image {
+        transition: none;
+    }
+}
+
+/* Modo landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .himno-section,
+    .simbolos-section {
+        padding: 2rem 10px;
+    }
+    
+    .himno-header,
+    .simbolos-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .himno-stanza,
+    .simbolo-item {
+        margin-bottom: 1rem;
+    }
+}

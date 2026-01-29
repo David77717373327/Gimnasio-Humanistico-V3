@@ -1,0 +1,886 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    --dark-blue: #264653;
+    --deep-blue: #003366;
+    --soft-blue: #07346e;
+    --slate-blue: #3A506B;
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+
+
+
+
+/* ============================================
+   SECCIÓN INTRODUCCIÓN - NUEVO
+============================================ */
+
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+============================================ */
+.proyectos-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding:  60px 40px 80px;
+}
+
+/* ============================================
+   PROYECTO ITEM
+============================================ */
+.proyecto-item {
+    background: var(--white);
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proyecto-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.proyecto-item:last-child {
+    margin-bottom: 3.5rem;
+}
+
+/* Encabezado - PADDING REDUCIDO */
+.proyecto-header {
+    background:  rgb(219, 217, 217);
+    padding: 15px 48px; /* REDUCIDO de 32px a 20px */
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.proyecto-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem; /* REDUCIDO de 2rem a 1.75rem */
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenido - Layout Grid */
+.proyecto-content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: auto;
+}
+
+/* ============================================
+   CARRUSEL - ALTURA REDUCIDA
+============================================ */
+.proyecto-carrusel {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    height: 350px; /* REDUCIDO de 400px a 350px */
+}
+
+.carrusel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.carrusel-image.active {
+    opacity: 1;
+}
+
+.carrusel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Controles del carrusel - OCULTOS POR DEFECTO */
+.carrusel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 20;
+    opacity: 0.9;
+}
+
+
+/* MOSTRAR controles al pasar el cursor sobre el carrusel */
+.proyecto-carrusel:hover .carrusel-controls {
+    opacity: 1;
+}
+
+.carrusel-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel-btn:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+.carrusel-btn i {
+    font-size: 1.2rem;
+}
+
+/* Indicadores */
+.carrusel-indicators {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+
+/* Contador - OCULTO POR DEFECTO */
+.carrusel-counter {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: white;
+    backdrop-filter: blur(10px);
+    color: black;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* MOSTRAR contador al pasar el cursor sobre el carrusel */
+.proyecto-carrusel:hover .carrusel-counter {
+    opacity: 1;
+}
+
+/* ============================================
+   INFORMACIÓN
+============================================ */
+.proyecto-info {
+    padding: 40px 45px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #ffffff 0%, #f8fafb 100%);
+}
+
+.proyecto-descripcion {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 480;
+    color: black;
+    text-align: justify;
+    margin: 0;
+}
+
+/* ============================================
+   MODAL
+============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 20px;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: calc(100vh - 120px);
+    object-fit: contain;
+}
+
+/* BOTÓN CERRAR */
+.modal-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    transition: all 0.3s ease;
+    
+    z-index: 10000;
+}
+
+
+/* Botones de navegación del modal */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+}
+
+.modal-nav.prev {
+    left: 20px;
+}
+
+.modal-nav.next {
+    right: 20px;
+}
+
+.modal-nav i {
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   RESPONSIVE MEJORADO - Desde 250px
+============================================ */
+
+/* Tablets grandes y laptops pequeñas */
+@media (max-width: 1024px) {
+    .proyectos-container {
+        padding: 50px 25px 70px;
+    }
+  
+    .proyecto-content {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-carrusel {
+        height: 320px;
+    }
+
+    .proyecto-info {
+        padding: 35px 30px;
+    }
+
+    .proyecto-header {
+        padding: 15px 35px;
+    }
+}
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+    .proyectos-container {
+        padding: 40px 20px 60px;
+    }
+
+    .proyecto-header {
+        padding: 15px 25px;
+    }
+
+    .proyecto-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 1.5px;
+    }
+
+    .proyecto-carrusel {
+        height: 280px;
+    }
+
+    .proyecto-info {
+        padding: 30px 20px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .carrusel-counter {
+        top: 20px;
+        left: 20px;
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .carrusel-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 2.5rem;
+    }
+
+    .modal-nav {
+        width: 48px;
+        height: 48px;
+    }
+
+    .modal-nav.prev {
+        left: 15px;
+    }
+
+    .modal-nav.next {
+        right: 15px;
+    }
+}
+
+/* Móviles medianos */
+@media (max-width: 480px) {
+    .proyectos-container {
+        padding: 35px 15px 50px;
+    }
+
+    .proyecto-item {
+        margin-bottom: 40px;
+    }
+
+    .proyecto-header {
+        padding: 12px 20px;
+    }
+
+    .proyecto-titulo {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+       
+    }
+
+    .proyecto-carrusel {
+        height: 250px;
+    }
+
+    .proyecto-info {
+        padding: 25px 18px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .carrusel-counter {
+        top: 15px;
+        left: 15px;
+        padding: 7px 13px;
+        font-size: 0.8rem;
+    }
+
+    .carrusel-controls {
+        padding: 0 15px;
+    }
+
+    .carrusel-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .carrusel-btn i {
+        font-size: 1.1rem;
+    }
+
+    .modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+
+    .modal-nav {
+        width: 44px;
+        height: 44px;
+    }
+
+    .modal-nav.prev {
+        left: 10px;
+    }
+
+    .modal-nav.next {
+        right: 10px;
+    }
+
+    .modal-nav i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 375px) {
+    .proyectos-container {
+        padding: 30px 12px 40px;
+    }
+
+    .proyecto-item {
+        margin-bottom: 35px;
+    }
+
+    .proyecto-header {
+        padding: 10px 15px;
+    }
+
+    .proyecto-titulo {
+        font-size: 1.1rem;
+        letter-spacing: 0.8px;
+        line-height: 1.3;
+    }
+
+    .proyecto-carrusel {
+        height: 220px;
+    }
+
+    .proyecto-info {
+        padding: 22px 15px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .carrusel-counter {
+        top: 12px;
+        left: 12px;
+        padding: 6px 11px;
+        font-size: 0.75rem;
+    }
+
+    .carrusel-controls {
+        padding: 0 12px;
+    }
+
+    .carrusel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carrusel-btn i {
+        font-size: 1rem;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.8rem;
+    }
+
+    .modal-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-nav.prev {
+        left: 8px;
+    }
+
+    .modal-nav.next {
+        right: 8px;
+    }
+
+    .modal-nav i {
+        font-size: 1.1rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 320px) {
+    .proyectos-container {
+        padding: 25px 10px 35px;
+    }
+
+    .proyecto-item {
+        margin-bottom: 30px;
+    }
+
+    .proyecto-header {
+        padding: 10px 12px;
+    }
+
+    .proyecto-titulo {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        line-height: 1.25;
+    }
+
+    .proyecto-carrusel {
+        height: 200px;
+    }
+
+    .proyecto-info {
+        padding: 20px 12px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .carrusel-counter {
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+
+    .carrusel-controls {
+        padding: 0 10px;
+    }
+
+    .carrusel-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .carrusel-btn i {
+        font-size: 0.95rem;
+    }
+
+    .modal-close {
+        top: 8px;
+        right: 8px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.6rem;
+    }
+
+    .modal-nav {
+        width: 38px;
+        height: 38px;
+    }
+
+    .modal-nav.prev {
+        left: 6px;
+    }
+
+    .modal-nav.next {
+        right: 6px;
+    }
+
+    .modal-nav i {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas extremadamente pequeñas (250px - 280px) */
+@media (max-width: 280px) {
+    .proyectos-container {
+        padding: 20px 8px 30px;
+    }
+
+    .proyecto-item {
+        margin-bottom: 25px;
+    }
+
+    .proyecto-header {
+        padding: 8px 10px;
+    }
+
+    .proyecto-titulo {
+        font-size: 0.9rem;
+        letter-spacing: 0.3px;
+        line-height: 1.2;
+        
+    }
+
+    .proyecto-carrusel {
+        height: 180px;
+    }
+
+    .proyecto-info {
+        padding: 18px 10px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.85rem;
+        line-height: 1.5;
+       
+    }
+
+    .carrusel-counter {
+        top: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        font-size: 0.65rem;
+    }
+
+    .carrusel-controls {
+        padding: 0 8px;
+    }
+
+    .carrusel-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .carrusel-btn i {
+        font-size: 0.9rem;
+    }
+
+    .carrusel-indicators {
+        bottom: 15px;
+        right: 15px;
+        gap: 6px;
+    }
+
+    .modal-close {
+        top: 6px;
+        right: 6px;
+        width: 34px;
+        height: 34px;
+        font-size: 1.4rem;
+    }
+
+    .modal-nav {
+        width: 35px;
+        height: 35px;
+    }
+
+    .modal-nav.prev {
+        left: 5px;
+    }
+
+    .modal-nav.next {
+        right: 5px;
+    }
+
+    .modal-nav i {
+        font-size: 0.95rem;
+    }
+
+    .modal.active {
+        padding: 50px 10px 10px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+    }
+}
+
+/* Pantallas ultra pequeñas (250px) */
+@media (max-width: 260px) {
+    .proyectos-container {
+        padding: 18px 6px 25px;
+    }
+
+    .proyecto-item {
+        margin-bottom: 20px;
+    }
+
+    .proyecto-header {
+        padding: 7px 8px;
+    }
+
+    .proyecto-titulo {
+        font-size: 0.85rem;
+        letter-spacing: 0.2px;
+        line-height: 1.15;
+       
+    }
+
+    .proyecto-carrusel {
+        height: 160px;
+    }
+
+    .proyecto-info {
+        padding: 15px 8px;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.8rem;
+        line-height: 1.45;
+        
+    }
+
+    .carrusel-counter {
+        top: 6px;
+        left: 6px;
+        padding: 3px 7px;
+        font-size: 0.6rem;
+    }
+
+    .carrusel-controls {
+        padding: 0 6px;
+    }
+
+    .carrusel-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .carrusel-btn i {
+        font-size: 0.85rem;
+    }
+
+    .carrusel-indicators {
+        bottom: 12px;
+        right: 12px;
+        gap: 5px;
+    }
+
+    .modal-close {
+        top: 5px;
+        right: 5px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.3rem;
+    }
+
+    .modal-nav {
+        width: 32px;
+        height: 32px;
+    }
+
+    .modal-nav.prev {
+        left: 4px;
+    }
+
+    .modal-nav.next {
+        right: 4px;
+    }
+
+    .modal-nav i {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mejoras generales para texto en pantallas pequeñas */
+@media (max-width: 480px) {
+    .proyecto-titulo,
+    .proyecto-descripcion {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}

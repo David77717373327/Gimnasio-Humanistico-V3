@@ -1,0 +1,76 @@
+# ===============================
+# ARCHIVOS DE ENTORNO
+# ===============================
+.env
+.env.*
+!.env.example
+
+# ===============================
+# DEPENDENCIAS
+# ===============================
+/vendor/
+/node_modules/
+
+# ===============================
+# BUILD / FRONTEND
+# ===============================
+/public/hot
+
+# ===============================
+# STORAGE
+# ===============================
+/public/storage
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# ===============================
+# CACHE / TESTING
+# ===============================
+.phpunit.result.cache
+/.phpunit.cache
+
+# ===============================
+# EDITORES / IDE
+# ===============================
+.idea/
+.vscode/
+.zed/
+.fleet/
+.nova/
+.phpactor.json
+
+# ===============================
+# SISTEMA OPERATIVO
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# LARAVEL / HOMESTEAD
+# ===============================
+Homestead.json
+Homestead.yaml
+auth.json
+
+# ===============================
+# LOGS
+# ===============================
+*.log
+
+# ===============================
+# VIDEOS
+# ===============================
+
+/public/videos/*.mp4
+public/videos/*.mov
+public/videos/*.avi
+
+
+
+
+
+
+

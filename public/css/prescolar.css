@@ -1,0 +1,287 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;  
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;  
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;  
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;  
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;  
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;  
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ============================================
+   HEADER SECTION PREESCOLAR - DISEÑO EMPRESARIAL REFINADO
+============================================ */
+
+.section-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0d3f27;
+    opacity: 0.85;
+}
+
+.section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+}
+
+
+
+.hero_parrafo{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.admision-nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-green);
+    position: relative;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.admision-nav-title::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: var(--accent-gold);
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+
+/* ============================================
+   METODOLOGÍA ACTIVA
+============================================ */
+.metodologia-section {
+    padding: 1rem 0;
+    background: var(--light-gray);
+}
+
+.metodologia-content {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.metodologia-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.metodologia-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.metodologia-number {
+    background-color: #0d6336;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.metodologia-icon {
+    color: #0d6336;
+    flex-shrink: 0;
+}
+
+.metodologia-text h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin: 0 0 0.3rem 0;
+    line-height: 1.3;
+}
+
+.metodologia-text p {
+    font-size: 0.9375rem;
+    color: black;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.metodologia-image {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+   margin-left: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metodologia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+/* ============================================
+   RESPONSIVE - PANTALLAS GRANDES
+============================================ */
+@media (min-width: 992px) {
+    .admision-nav-title {
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 2.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .metodologia-section {
+        padding: 2rem 0;
+    }
+    
+    .metodologia-content {
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    
+    .metodologia-image {
+        height: 600px;
+        margin-left: 2rem;
+    }
+    
+    .metodologia-list {
+        gap: 1.3rem;
+        margin-top: 1.3rem;
+    }
+    
+    .metodologia-text h4 {
+        font-size: 1.4rem;
+    }
+    
+    .metodologia-text p {
+        font-size: 1rem;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

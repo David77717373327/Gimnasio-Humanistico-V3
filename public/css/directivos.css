@@ -1,0 +1,739 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Variables de Colores Suaves por Rol */
+    /* Colores suaves institucionales */
+    --jefe-color: #073558;
+    /* Azul suave */
+    --contador-color: #0d3f27;
+    /* Verde suave */
+    --secretaria-color: #ee6666;
+    /* Rosa suave */
+    --pagador-color: #a56725;
+    /* Naranja suave */
+    --apoyo-color: #9b87b8;
+    /* Morado suave */
+    --servicios-color: #6fb3b8;
+    /* Turquesa suave */
+    --docentes-color: #b8936b;
+    /* Café suave */
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+           SECCIÓN DIRECTIVOS
+============================================ */
+.directivos-section {
+    padding: 7rem 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
+}
+
+.directivo-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    padding: 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.directivo-item:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+           IMAGEN DEL DIRECTIVO
+============================================ */
+.directivo-image {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 550px;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--transition-normal);
+    padding: 40px;
+}
+
+/* Estilo específico solo para el logo */
+.directivo-item:first-child .image-wrapper img {
+    object-fit: contain;
+    padding: 60px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Mantener el estilo normal para otras imágenes */
+.directivo-item:not(:first-child) .image-wrapper img {
+    object-fit: cover;
+    padding: 0;
+}
+
+.image-accent {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-gold));
+    border-radius: 50%;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.directivo-item:nth-child(odd) .image-accent {
+    top: -30px;
+    left: -30px;
+}
+
+.directivo-item:nth-child(even) .image-accent {
+    bottom: -30px;
+    right: -30px;
+}
+
+/* ============================================
+           CONTENIDO DEL DIRECTIVO
+============================================ */
+.directivo-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.directivo-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.directivo-nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.directivo-cargo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.directivo-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent-gold), var(--dark-gold));
+}
+
+.directivo-descripcion {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
+
+/* ============================================
+           ORDEN ALTERNO (IMAGEN DERECHA/IZQUIERDA)
+============================================ */
+.directivo-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.directivo-item.reverse .directivo-divider {
+    background: linear-gradient(to left, var(--accent-gold), var(--dark-gold));
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - TABLETS GRANDES
+============================================ */
+@media (max-width: 1200px) {
+    .directivo-item {
+        gap: 2.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .directivo-image {
+        flex: 0 0 42%;
+    }
+
+    .image-wrapper img {
+        height: 500px;
+    }
+
+    .directivo-nombre {
+        font-size: 2.5rem;
+    }
+
+    .directivo-cargo {
+        font-size: 1.1rem;
+        letter-spacing: 2.5px;
+    }
+
+    .directivo-content {
+        padding: 0 1.5rem;
+    }
+
+    .directivo-descripcion {
+        font-size: 1.02rem;
+    }
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - TABLETS MEDIANAS
+============================================ */
+@media (max-width: 992px) {
+    .directivos-section {
+        padding: 5rem 0;
+    }
+
+    .directivo-item {
+        flex-direction: column !important;
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+        padding: 0 2rem;
+    }
+
+    .directivo-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .image-wrapper {
+        box-shadow: var(--shadow-md);
+    }
+
+    .image-wrapper img {
+        height: 480px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 50px;
+    }
+
+    .image-accent {
+        width: 100px;
+        height: 100px;
+    }
+
+    .directivo-content {
+        padding: 0;
+        gap: 1.3rem;
+    }
+
+    .directivo-nombre {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    .directivo-cargo {
+        text-align: center;
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+    }
+
+    .directivo-divider {
+        margin: 0.8rem auto;
+        background: linear-gradient(to right, var(--accent-gold), var(--dark-gold)) !important;
+    }
+
+    .directivo-descripcion {
+        text-align: center;
+        font-size: 1rem;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+
+    .directivo-info-adicional {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - TABLETS PEQUEÑAS
+============================================ */
+@media (max-width: 768px) {
+    .directivos-section {
+        padding: 4rem 0;
+    }
+
+    .directivo-item {
+        gap: 2rem;
+        margin-bottom: 3.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .directivo-image {
+        max-width: 400px;
+    }
+
+    .image-wrapper img {
+        height: 420px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 40px;
+    }
+
+    .image-accent {
+        width: 80px;
+        height: 80px;
+    }
+
+    .directivo-item:nth-child(odd) .image-accent {
+        top: -20px;
+        left: -20px;
+    }
+
+    .directivo-item:nth-child(even) .image-accent {
+        bottom: -20px;
+        right: -20px;
+    }
+
+    .directivo-content {
+        gap: 1.2rem;
+    }
+
+    .directivo-nombre {
+        font-size: 2rem;
+    }
+
+    .directivo-cargo {
+        font-size: 1rem;
+        letter-spacing: 1.8px;
+    }
+
+    .directivo-divider {
+        width: 80px;
+        height: 3px;
+    }
+
+    .directivo-descripcion {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - MÓVILES GRANDES
+============================================ */
+@media (max-width: 640px) {
+    .directivos-section {
+        padding: 3.5rem 0;
+    }
+
+    .directivo-item {
+        padding: 0 1.2rem;
+        gap: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .directivo-image {
+        max-width: 100%;
+    }
+
+    .image-wrapper {
+        box-shadow: var(--shadow-sm);
+    }
+
+    .image-wrapper img {
+        height: 380px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 35px;
+    }
+
+    .image-accent {
+        width: 70px;
+        height: 70px;
+        opacity: 0.12;
+    }
+
+    .directivo-content {
+        gap: 1rem;
+    }
+
+    .directivo-nombre {
+        font-size: 1.85rem;
+    }
+
+    .directivo-cargo {
+        font-size: 0.95rem;
+        letter-spacing: 1.5px;
+    }
+
+    .directivo-divider {
+        width: 70px;
+        height: 3px;
+        margin: 0.6rem auto;
+    }
+
+    .directivo-descripcion {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+
+    .directivo-info-adicional {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - MÓVILES MEDIANOS
+============================================ */
+@media (max-width: 480px) {
+    .directivos-section {
+        padding: 3rem 0;
+    }
+
+    .directivo-item {
+        padding: 0 1rem;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .image-wrapper img {
+        height: 350px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 30px;
+    }
+
+    .directivo-item:not(:first-child) .image-wrapper img {
+        padding: 0;
+    }
+
+    .image-accent {
+        width: 60px;
+        height: 60px;
+    }
+
+    .directivo-item:nth-child(odd) .image-accent {
+        top: -15px;
+        left: -15px;
+    }
+
+    .directivo-item:nth-child(even) .image-accent {
+        bottom: -15px;
+        right: -15px;
+    }
+
+    .directivo-content {
+        gap: 0.9rem;
+    }
+
+    .directivo-nombre {
+        font-size: 1.7rem;
+    }
+
+    .directivo-cargo {
+        font-size: 0.9rem;
+        letter-spacing: 1.2px;
+    }
+
+    .directivo-divider {
+        width: 60px;
+        height: 2.5px;
+    }
+
+    .directivo-descripcion {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - MÓVILES PEQUEÑOS
+============================================ */
+@media (max-width: 375px) {
+    .directivos-section {
+        padding: 2.5rem 0;
+    }
+
+    .directivo-item {
+        padding: 0 0.8rem;
+        gap: 1.3rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .image-wrapper img {
+        height: 320px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 25px;
+    }
+
+    .image-accent {
+        width: 50px;
+        height: 50px;
+    }
+
+    .directivo-item:nth-child(odd) .image-accent {
+        top: -12px;
+        left: -12px;
+    }
+
+    .directivo-item:nth-child(even) .image-accent {
+        bottom: -12px;
+        right: -12px;
+    }
+
+    .directivo-content {
+        gap: 0.8rem;
+    }
+
+    .directivo-nombre {
+        font-size: 1.6rem;
+    }
+
+    .directivo-cargo {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .directivo-divider {
+        width: 55px;
+        height: 2.5px;
+    }
+
+    .directivo-descripcion {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+}
+
+/* ============================================
+           RESPONSIVE DESIGN - MÓVILES MUY PEQUEÑOS
+============================================ */
+@media (max-width: 320px) {
+    .directivos-section {
+        padding: 2rem 0;
+    }
+
+    .directivo-item {
+        padding: 0 0.6rem;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .image-wrapper img {
+        height: 280px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 20px;
+    }
+
+    .image-accent {
+        width: 45px;
+        height: 45px;
+    }
+
+    .directivo-item:nth-child(odd) .image-accent {
+        top: -10px;
+        left: -10px;
+    }
+
+    .directivo-item:nth-child(even) .image-accent {
+        bottom: -10px;
+        right: -10px;
+    }
+
+    .directivo-content {
+        gap: 0.7rem;
+    }
+
+    .directivo-nombre {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .directivo-cargo {
+        font-size: 0.8rem;
+        letter-spacing: 0.8px;
+    }
+
+    .directivo-divider {
+        width: 50px;
+        height: 2px;
+    }
+
+    .directivo-descripcion {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+}
+
+/* ============================================
+           MODO LANDSCAPE PARA MÓVILES
+============================================ */
+@media (max-width: 896px) and (orientation: landscape) {
+    .directivos-section {
+        padding: 3rem 0;
+    }
+
+    .directivo-item {
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .image-wrapper img {
+        height: 300px;
+    }
+
+    .directivo-item:first-child .image-wrapper img {
+        padding: 30px;
+    }
+
+    .directivo-nombre {
+        font-size: 1.7rem;
+    }
+
+    .directivo-cargo {
+        font-size: 0.9rem;
+    }
+
+    .directivo-descripcion {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+}
+
+/* ============================================
+           OPTIMIZACIÓN DE RENDIMIENTO MÓVIL
+============================================ */
+@media (max-width: 768px) {
+    .image-wrapper {
+        box-shadow: var(--shadow-sm);
+    }
+
+    .image-wrapper img {
+        transition: transform 0.2s ease-out;
+    }
+
+    .directivo-item {
+        will-change: auto;
+    }
+}

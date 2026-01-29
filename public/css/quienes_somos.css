@@ -1,0 +1,781 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+
+/* Variables CSS modernizadas */
+:root {
+    /* Paleta de colores profesional y equilibrada */
+    --primary-blue: #1E3A5F;
+    --secondary-blue: #2C5282;
+    --accent-blue: #3182CE;
+    --light-blue: #E6F3FF;
+
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-muted: #718096;
+    --text-white: #FFFFFF;
+
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL MEJORADA
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+
+/* ============================================
+   TIMELINE HISTÓRICA - OPTIMIZADA PARA MÓVIL
+============================================ */
+
+/* Timeline Section */
+.timeline-section {
+    min-height: 100vh;
+    padding: 0rem;
+    padding-top: 4rem;
+    position: relative;
+}
+
+.timeline-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Línea central verde - COMIENZA EXACTAMENTE DONDE TERMINA LA BOLA */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 3px;
+    height: calc(100% - 50px);
+    background-color: var(--primary-green);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Bola verde inicial - EN LA PARTE SUPERIOR */
+.timeline-start {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-start-circle {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-green);
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--primary-green), 0 2px 12px rgba(13, 79, 60, 0.3);
+    position: relative;
+    margin: 0;
+    display: block;
+}
+
+/* Línea que conecta la bola inicial con el primer año */
+.timeline-start-circle::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 15px;
+    background-color: var(--primary-green);
+}
+
+/* Items de timeline - SIN ANIMACIONES */
+.timeline-item {
+    position: relative;
+    margin: 0 0 5rem 0;
+    opacity: 1;
+}
+
+/* Contenedor para año + marcador */
+.timeline-year-marker {
+    position: absolute;
+    left: 50%;
+    top: -90px;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Bola del año (verde) */
+.year-circle {
+    width: 95px;
+    height: 95px;
+    background-color: var(--primary-green);
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 3px 15px rgba(13, 79, 60, 0.35);
+}
+
+.year-circle::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 70px;
+    background-color: var(--primary-green);
+}
+
+.year-text {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #fff;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+}
+
+/* Marcador pequeño */
+.timeline-marker {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 3px solid var(--primary-green);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(13, 79, 60, 0.15);
+    position: relative;
+}
+
+.timeline-marker::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+}
+
+/* Línea que conecta marcador con el card */
+.timeline-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 30px;
+    background-color: var(--primary-green);
+}
+
+/* Contenedor del contenido - SIMÉTRICO */
+.timeline-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 90px;
+    position: relative;
+}
+
+/* Items impares (izquierda) */
+.timeline-item:nth-child(odd) .timeline-content-wrapper {
+    justify-content: flex-end;
+    padding-right: calc(50% + 1.5px);
+}
+
+/* Items pares (derecha) */
+.timeline-item:nth-child(even) .timeline-content-wrapper {
+    justify-content: flex-start;
+    padding-left: calc(50% + 1.5px);
+}
+
+/* Flecha - COMPLETAMENTE SIMÉTRICA */
+.timeline-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+/* Flecha para items impares (apunta a la derecha) */
+.timeline-item:nth-child(odd) .timeline-arrow {
+    border-width: 30px 0 20px 30px;
+    border-color: transparent transparent transparent var(--primary-green);
+    order: 2;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+/* Flecha para items pares (apunta a la izquierda) */
+.timeline-item:nth-child(even) .timeline-arrow {
+    border-width: 30px 30px 20px 0;
+    border-color: transparent var(--primary-green) transparent transparent;
+    order: 1;
+    margin-right: 0;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+/* Contenido principal */
+.timeline-content {
+    margin-top: 30px;
+    flex: 1;
+    max-width: 550px;
+    background: transparent;
+    padding: 0;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    order: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    order: 2;
+}
+
+/* Barra superior VERDE */
+.timeline-header-bar {
+    background-color: var(--primary-green);
+    padding: 1rem 2rem;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-year-display {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive;
+    letter-spacing: 0.5px;
+}
+
+/* Sección de imágenes */
+.timeline-images {
+    display: flex;
+    gap: 0;
+    background-color: #e5e5e5;
+    padding: 0;
+    min-height: 170px;
+}
+
+.timeline-image-item {
+    flex: 1;
+    height: 170px;
+    overflow: hidden;
+}
+
+.timeline-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Texto descriptivo */
+.timeline-text-content {
+    background-color: white;
+    margin-top: 10px;
+}
+
+.timeline-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    font-weight: 510;
+    line-height: 1.5;
+    color: #0f0f0f;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+============================================ */
+@media (max-width: 992px) {
+    .timeline-content {
+        max-width: 580px;
+    }
+
+    .timeline-images {
+        min-height: 160px;
+    }
+
+    .timeline-image-item {
+        height: 160px;
+    }
+
+    .year-circle {
+        width: 75px;
+        height: 75px;
+    }
+
+    .year-text {
+        font-size: 1.5rem;
+    }
+
+    .timeline-text {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MÓVIL MEJORADO
+============================================ */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 0 1rem;
+    }
+
+    .timeline {
+        padding-top: 60px;
+    }
+
+    /* Línea a la izquierda */
+    .timeline::before {
+        left: 30px;
+        top: 45px;
+        height: calc(100% - 45px);
+    }
+
+    /* Bola inicial a la izquierda */
+    .timeline-start {
+        left: 30px;
+        top: 5px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-start-circle {
+        width: 26px;
+        height: 26px;
+        border: 3px solid #fff;
+    }
+
+    .timeline-start-circle::after {
+        bottom: -12px;
+        height: 12px;
+        width: 3px;
+    }
+
+    /* Marcadores de año a la izquierda */
+    .timeline-year-marker {
+        left: 30px;
+        top: -60px;
+        transform: translateX(-50%);
+        gap: 30px;
+    }
+
+    .year-circle {
+        width: 60px;
+        height: 60px;
+        border: 4px solid #fff;
+    }
+
+    .year-circle::before {
+        top: -40px;
+        height: 40px;
+        width: 3px;
+    }
+
+    .year-text {
+        font-size: 1.2rem;
+    }
+
+    .timeline-marker {
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--primary-green);
+    }
+
+    .timeline-marker::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Línea conectora más larga */
+    .timeline-marker::after {
+        bottom: -40px;
+        height: 40px;
+        width: 3px;
+    }
+
+    /* Contenido a la derecha */
+    .timeline-item {
+        margin-bottom: 4rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-wrapper,
+    .timeline-item:nth-child(even) .timeline-content-wrapper {
+        justify-content: flex-start;
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 70px;
+        margin-top: 80px;
+    }
+
+    /* FLECHA EN MÓVIL - APUNTA A LA IZQUIERDA */
+    .timeline-arrow {
+        display: block;
+        border-width: 22px 25px 22px 0;
+        border-color: transparent var(--primary-green) transparent transparent;
+        order: 1;
+        margin-left: 0;
+        margin-right: 8px;
+        margin-top: 30px;
+    }
+
+    /* Todas las flechas apuntan a la izquierda en móvil */
+    .timeline-item:nth-child(odd) .timeline-arrow,
+    .timeline-item:nth-child(even) .timeline-arrow {
+        border-width: 22px 25px 22px 0;
+        border-color: transparent var(--primary-green) transparent transparent;
+        order: 1;
+        margin-left: 0;
+        margin-right: 8px;
+        margin-top: 30px;
+    }
+
+    .timeline-content {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+        order: 2;
+    }
+
+    /* Ajustes de contenido */
+    .timeline-header-bar {
+        padding: 0.8rem 1.2rem;
+        max-height: 45px;
+    }
+
+    .timeline-year-display {
+        font-size: 1rem;
+    }
+
+    .timeline-images {
+        min-height: 140px;
+        flex-direction: row;
+    }
+
+    .timeline-image-item {
+        height: 140px;
+        min-width: 0;
+    }
+
+    .timeline-text-content {
+        padding: 1.2rem;
+        margin-top: 15px;
+    }
+
+    .timeline-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MÓVIL PEQUEÑO
+============================================ */
+@media (max-width: 576px) {
+    .timeline-section {
+        padding: 1.5rem 0;
+    }
+
+    .timeline-container {
+        padding: 0 0.8rem;
+    }
+
+    .timeline {
+        padding-top: 50px;
+    }
+
+    /* Línea más a la izquierda */
+    .timeline::before {
+        left: 25px;
+        top: 40px;
+        height: calc(100% - 40px);
+        width: 3px;
+    }
+
+    /* Bola inicial */
+    .timeline-start {
+        left: 25px;
+        top: 10px;
+    }
+
+    .timeline-start-circle {
+        width: 24px;
+        height: 24px;
+        border: 3px solid #fff;
+    }
+
+    .timeline-start-circle::after {
+        bottom: -10px;
+        height: 10px;
+        width: 3px;
+    }
+
+    /* Marcadores de año */
+    .timeline-year-marker {
+        left: 25px;
+        top: -70px;
+        gap: 25px;
+    }
+
+    .year-circle {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #fff;
+    }
+
+    .year-circle::before {
+        top: -35px;
+        height: 35px;
+        width: 3px;
+    }
+
+    .year-text {
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .timeline-marker {
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--primary-green);
+    }
+
+    .timeline-marker::before {
+        width: 7px;
+        height: 7px;
+    }
+
+    .timeline-marker::after {
+        bottom: -35px;
+        height: 35px;
+        width: 3px;
+    }
+
+    /* Contenido */
+    .timeline-item {
+        margin-bottom: 3.5rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-wrapper,
+    .timeline-item:nth-child(even) .timeline-content-wrapper {
+        margin-left: 60px;
+        margin-top: 75px;
+    }
+
+    /* FLECHA EN MÓVIL PEQUEÑO */
+    .timeline-item:nth-child(odd) .timeline-arrow,
+    .timeline-item:nth-child(even) .timeline-arrow {
+        border-width: 20px 22px 20px 0;
+        margin-right: 7px;
+        margin-top: 28px;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-header-bar {
+        padding: 0.7rem 1rem;
+        max-height: 40px;
+    }
+
+    .timeline-year-display {
+        font-size: 0.9rem;
+    }
+
+    .timeline-images {
+        min-height: 120px;
+        flex-wrap: nowrap;
+    }
+
+    .timeline-image-item {
+        height: 120px;
+        flex: 1 1 50%;
+    }
+
+    .timeline-text-content {
+        padding: 1rem;
+        margin-top: 12px;
+    }
+
+    .timeline-text {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+}
+
+/* ============================================
+   MÓVIL MUY PEQUEÑO (< 400px)
+============================================ */
+@media (max-width: 400px) {
+    .timeline-container {
+        padding: 0 0.5rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-start {
+        left: 20px;
+    }
+
+    .timeline-year-marker {
+        left: 20px;
+    }
+
+    .year-circle {
+        width: 55px;
+        height: 55px;
+    }
+
+    .year-text {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-wrapper,
+    .timeline-item:nth-child(even) .timeline-content-wrapper {
+        margin-left: 50px;
+    }
+
+    /* FLECHA EN MÓVIL MUY PEQUEÑO */
+    .timeline-item:nth-child(odd) .timeline-arrow,
+    .timeline-item:nth-child(even) .timeline-arrow {
+        border-width: 21px 21px 20px 0;
+        margin-left: -21px;
+        margin-right: -1px;
+        margin-top: -1px;
+    }
+
+    .timeline-header-bar {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .timeline-year-display {
+        font-size: 0.85rem;
+    }
+
+    .timeline-images {
+        min-height: 110px;
+    }
+
+    .timeline-image-item {
+        height: 110px;
+    }
+
+    .timeline-text-content {
+        padding: 0.1rem;
+    }
+
+    .timeline-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}

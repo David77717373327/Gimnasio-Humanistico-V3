@@ -1,0 +1,762 @@
+/*================================
+    Galeria imágenes - MEJORADA
+=================================*/
+
+/* Modal Lightbox - SIN CAMBIOS */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+}
+
+.lightbox .lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 40px;
+    margin-right: 20px;
+    right: 0;
+    background: white;
+    color: black;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header de la sección */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.gallery-subtitle {
+    color: black;
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    padding-bottom: 5rem;
+}
+
+/* Grid optimizado para 2-3-2 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+/* ====================================
+   MEJORAS APLICADAS - PRIMERA VISTA
+   ==================================== */
+
+/* Primera fila: 2 imágenes - ALTURA AUMENTADA + BORDES REDONDEADOS */
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2) {
+    grid-column: span 6;
+    height: 300px;  /* Altura aumentada de 220px a 280px */
+    border-radius: 16px;  /* Bordes redondeados profesionales */
+}
+
+/* Segunda fila: 3 imágenes - ALTURA AJUSTADA + BORDES SUAVES */
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(5) {
+    grid-column: span 4;
+    height: 280px;  /* Altura aumentada de 220px a 240px */
+    border-radius: 12px;  /* Bordes más suaves */
+}
+
+/* Tercera fila: 2 imágenes - ALTURA BALANCEADA + BORDE DIFERENCIADO */
+.gallery-item:nth-child(6) {
+    grid-column: span 7;
+    height: 300px;  /* Altura aumentada de 220px a 260px */
+    border-radius: 14px 14px 14px 40px;  /* Borde asimétrico elegante */
+}
+
+.gallery-item:nth-child(7) {
+    grid-column: span 5;
+    height: 300px;  /* Misma altura que la anterior */
+    border-radius: 40px 14px 14px 14px;  /* Borde asimétrico opuesto */
+}
+
+/* Estilos de las tarjetas - SOMBRAS MEJORADAS */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);  /* Sombra más profunda */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);  /* Elevación aumentada */
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);  /* Sombra más dramática al hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);  /* Zoom ligeramente aumentado */
+}
+
+/* Overlay sutil en hover - NUEVA CARACTERÍSTICA */
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+
+
+
+/* ============================================
+   RESPONSIVE DESIGN - MÓVILES Y TABLETS
+   Añadir al final del archivo CSS existente
+============================================ */
+
+/* ============================================
+   TABLETS (768px - 991px)
+============================================ */
+
+
+
+
+/* Ajuste solo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .lightbox .lightbox-nav {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 20px !important;
+    }
+
+    .lightbox-prev { left: 10px !important; }
+    .lightbox-next { right: 10px !important; }
+}
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    /* Títulos y encabezados */
+    .admision-nav-title {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+        padding: 0 1rem;
+    }
+
+    .section-label {
+        font-size: 0.813rem;
+        padding: 0 1rem;
+    }
+
+    /* Metodología Section */
+    .metodologia-section {
+        padding: 1.5rem 0;
+    }
+
+    .metodologia-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .metodologia-image {
+        height: 450px;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .metodologia-list {
+        gap: 1rem;
+    }
+
+    .metodologia-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1.25rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.938rem;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+
+    /* Galería */
+    .gallery-container {
+        padding: 0 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .gallery-title {
+        font-size: 2.4rem;
+    }
+
+    .gallery-grid {
+        gap: 20px;
+    }
+
+    /* Grid ajustado para tablets */
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2) {
+        height: 200px;
+    }
+
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5) {
+        height: 180px;
+    }
+
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 200px;
+    }
+
+    .lightbox-close {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: 30px;
+        margin-right: 15px;
+    }
+
+    .lightbox-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   MÓVILES GRANDES (576px - 767px)
+============================================ */
+@media (max-width: 767px) {
+    /* Espaciado general */
+    :root {
+        --section-padding: 3rem 0;
+        --container-padding: 0 1rem;
+    }
+
+    /* Títulos principales */
+    .admision-nav-title {
+        font-size: 2rem;
+        padding: 0 1rem;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .admision-nav-title::after {
+        width: 50px;
+        height: 2.5px;
+        margin: 8px auto 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    /* Metodología Section */
+    .metodologia-section {
+        padding: 2rem 0;
+    }
+
+    .metodologia-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .metodologia-list {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .metodologia-item {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .metodologia-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.938rem;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.7;
+    }
+
+    .metodologia-image {
+        width: calc(100% - 2rem);
+        height: 350px;
+        margin: 2rem 1rem 0 1rem;
+        border-radius: 12px;
+    }
+
+    .metodologia-image img {
+        margin-left: 0;
+        border-radius: 12px;
+    }
+
+    /* Galería */
+    .gallery-header {
+        margin-bottom: 40px;
+        padding: 0 1rem;
+    }
+
+    .gallery-title {
+        font-size: 2rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .gallery-container {
+        padding: 0 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Todas las imágenes en columna única */
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        grid-column: span 1;
+        height: 250px;
+        border-radius: 12px;
+    }
+
+    .gallery-item img {
+        border-radius: 12px;
+    }
+
+    /* Lightbox móvil */
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 85vh;
+    }
+
+    .lightbox-close {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+        top: 15px;
+        margin-right: 10px;
+    }
+
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+}
+
+/* ============================================
+   MÓVILES PEQUEÑOS (menor a 576px)
+============================================ */
+@media (max-width: 575px) {
+    /* Títulos */
+    .admision-nav-title {
+        font-size: 1.75rem;
+        padding: 0 0.75rem;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .admision-nav-title::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+        padding: 0 0.75rem;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.03em;
+    }
+
+    /* Metodología */
+    .metodologia-section {
+        padding: 1.5rem 0;
+    }
+
+    .metodologia-content {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .metodologia-list {
+        gap: 1.25rem;
+    }
+
+    .metodologia-item {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+
+    .metodologia-number {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1.1rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.875rem;
+        line-height: 1.65;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .metodologia-image {
+        width: calc(100% - 1.5rem);
+        height: 280px;
+        margin: 1.5rem 0.75rem 0 0.75rem;
+        border-radius: 10px;
+    }
+
+    /* Galería */
+    .gallery-title {
+        font-size: 1.75rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .gallery-container {
+        padding: 0 0.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 220px;
+        border-radius: 10px;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Lightbox extra pequeño */
+    .lightbox-close {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        top: 10px;
+        margin-right: 8px;
+    }
+
+    .lightbox-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+}
+
+/* ============================================
+   MÓVILES MUY PEQUEÑOS (menor a 375px)
+============================================ */
+@media (max-width: 374px) {
+    .admision-nav-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .metodologia-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    .metodologia-text h4 {
+        font-size: 1rem;
+    }
+
+    .metodologia-text p {
+        font-size: 0.813rem;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+
+    .metodologia-image {
+        height: 240px;
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 200px;
+    }
+}
+
+/* ============================================
+   MEJORAS DE ACCESIBILIDAD Y UX MÓVIL
+============================================ */
+@media (max-width: 767px) {
+    /* Mejorar área táctil */
+    .gallery-item {
+        min-height: 200px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Optimizar animaciones para móvil */
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    .gallery-item:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+
+    /* Scroll suave */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevenir zoom en inputs */
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MODE (Modo horizontal en móviles)
+============================================ */
+@media (max-width: 767px) and (orientation: landscape) {
+    .metodologia-image {
+        height: 300px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7) {
+        height: 220px;
+    }
+
+    .lightbox-content {
+        max-height: 90vh;
+    }
+}

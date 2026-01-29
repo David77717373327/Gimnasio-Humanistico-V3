@@ -1,0 +1,815 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/*=============================================
+    SECCIÓN DE INTRODUCCIÓN MEJORADA
+==============================================*/
+.intro-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3em 1rem;
+}
+
+.intro-text {
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.85;
+    color: black;
+    text-align: center;
+    max-width: 1300px;
+    margin: 0 auto 4rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gobierno-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.gobierno-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.5vw, 1.95rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.column-description {
+    font-size: clamp(0.9rem, 1.4vw, 1rem);
+    line-height: 1.7;
+    color: black;
+    text-align: center;
+    margin-bottom: 2rem;
+    min-height: 60px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* FLIP CARD */
+.flip-card {
+    perspective: 1000px;
+    height: 480px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 1px solid var(--medium-gray);
+}
+
+/* FRONT */
+.flip-card-front {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.card-icon {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 3px solid var(--secondary-gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+
+.title-intro {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 0 0.5rem;
+    line-height: 1.3;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .title-intro {
+        font-size: 2rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .title-intro {
+        font-size: 1.5rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+    .title-intro {
+        font-size: 1.3rem;
+    }
+}
+
+/* Pantallas muy pequeñas (250px) */
+@media (max-width: 250px) {
+    .title-intro {
+        font-size: 1.2rem;
+        padding: 0 0.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+.front-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.front-subtitle {
+    font-size: 1.1rem;
+    color: black;
+    text-align: center;
+}
+
+.hover-hint {
+    position: absolute;
+    bottom: 25px;
+    font-size: 0.85rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* BACK */
+.flip-card-back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 2.5rem 2rem;
+    overflow-y: auto;
+}
+
+.back-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: solid 2px var(--primary-green);
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+
+.member-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.bullet {
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    line-height: 1.6;
+    flex-shrink: 0;
+}
+
+.member-text {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: black;
+    flex: 1;
+}
+
+.member-text strong {
+    color: #000000;
+    font-weight: 600;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS Y PANTALLAS MEDIANAS
+============================================= */
+@media (max-width: 1024px) {
+    .intro-section {
+        padding: 5em 1.5rem;
+    }
+
+    .gobierno-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 3rem;
+    }
+
+    .flip-card {
+        height: 460px;
+    }
+
+    .card-icon {
+        width: 160px;
+        height: 160px;
+    }
+
+    .front-title {
+        font-size: 1.85rem;
+    }
+
+    .front-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .back-title {
+        font-size: 1.4rem;
+    }
+
+    .member-text {
+        font-size: 0.88rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS PEQUEÑAS
+============================================= */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 4em 1rem;
+    }
+
+    .intro-text {
+        margin-bottom: 3rem;
+    }
+
+    .gobierno-grid {
+        gap: 2.5rem;
+        max-width: 500px;
+    }
+
+    .column-description {
+        min-height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .flip-card {
+        height: 440px;
+    }
+
+    .flip-card-front {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .card-icon {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 1.5rem;
+    }
+
+    .front-title {
+        font-size: 1.7rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .front-subtitle {
+        font-size: 1rem;
+    }
+
+    .hover-hint {
+        bottom: 20px;
+        font-size: 0.8rem;
+    }
+
+    .flip-card-back {
+        padding: 2rem 1.5rem;
+    }
+
+    .back-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .member-text {
+        font-size: 0.9rem;
+    }
+
+    .bullet {
+        font-size: 1.2rem;
+        margin-right: 0.8rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES GRANDES
+============================================= */
+@media (max-width: 640px) {
+    .intro-section {
+        padding: 3em 0.8rem;
+    }
+
+    .intro-text {
+        margin-bottom: 2.5rem;
+    }
+
+    .gobierno-grid {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .column-title {
+        margin-bottom: 0.8rem;
+    }
+
+    .column-description {
+        margin-bottom: 1.2rem;
+    }
+
+    .flip-card {
+        height: 420px;
+    }
+
+    .flip-card-front {
+        padding: 2rem 1.2rem;
+    }
+
+    .card-icon {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.2rem;
+        border-width: 2px;
+    }
+
+    .front-title {
+        font-size: 1.6rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hover-hint {
+        bottom: 18px;
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+
+    .flip-card-back {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .back-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .members-list {
+        gap: 0;
+    }
+
+    .member-item {
+        padding: 0;
+    }
+
+    .member-text {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    .bullet {
+        font-size: 1.1rem;
+        margin-right: 0.7rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES MEDIANOS
+============================================= */
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 2.5em 0.6rem;
+    }
+
+    .intro-text {
+        margin-bottom: 2rem;
+    }
+
+    .gobierno-grid {
+        gap: 1.8rem;
+    }
+
+    .flip-card {
+        height: 400px;
+    }
+
+    .flip-card-front {
+        padding: 1.8rem 1rem;
+    }
+
+    .card-icon {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 1rem;
+    }
+
+    .front-title {
+        font-size: 1.5rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hover-hint {
+        bottom: 15px;
+        font-size: 0.7rem;
+    }
+
+    .flip-card-back {
+        padding: 1.5rem 1rem;
+    }
+
+    .back-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .member-text {
+        font-size: 0.85rem;
+    }
+
+    .bullet {
+        font-size: 1rem;
+        margin-right: 0.6rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES PEQUEÑOS
+============================================= */
+@media (max-width: 375px) {
+    .intro-section {
+        padding: 2em 0.5rem;
+    }
+
+    .intro-text {
+        margin-bottom: 1.5rem;
+    }
+
+    .gobierno-grid {
+        gap: 1.5rem;
+    }
+
+    .flip-card {
+        height: 380px;
+    }
+
+    .flip-card-front {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .card-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.9rem;
+    }
+
+    .front-title {
+        font-size: 1.4rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hover-hint {
+        bottom: 12px;
+        font-size: 0.65rem;
+    }
+
+    .flip-card-back {
+        padding: 1.3rem 0.9rem;
+    }
+
+    .back-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .member-text {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    .bullet {
+        font-size: 0.95rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES MUY PEQUEÑOS
+============================================= */
+@media (max-width: 320px) {
+    .intro-section {
+        padding: 1.5em 0.4rem;
+    }
+
+    .intro-text {
+        margin-bottom: 1.2rem;
+    }
+
+    .gobierno-grid {
+        gap: 1.2rem;
+    }
+
+    .flip-card {
+        height: 360px;
+    }
+
+    .flip-card-front {
+        padding: 1.2rem 0.7rem;
+    }
+
+    .card-icon {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 0.8rem;
+    }
+
+    .front-title {
+        font-size: 1.3rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hover-hint {
+        bottom: 10px;
+        font-size: 0.6rem;
+    }
+
+    .flip-card-back {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .back-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .member-text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .bullet {
+        font-size: 0.9rem;
+        margin-right: 0.4rem;
+    }
+}
+
+/* =============================================
+   MEJORAS DE INTERACCIÓN TÁCTIL PARA MÓVILES
+============================================= */
+@media (max-width: 768px) {
+    /* Deshabilitar hover en móviles y habilitar tap */
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+    
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Mejorar área táctil */
+    .flip-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Optimizar scroll en tarjetas */
+    .flip-card-back {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* =============================================
+   OPTIMIZACIÓN DE RENDIMIENTO
+============================================= */
+@media (max-width: 768px) {
+    /* Reducir complejidad de sombras en móviles */
+    .card-icon {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Optimizar transiciones en móviles */
+    .flip-card-inner {
+        transition: transform 0.6s;
+    }
+}
+
+/* =============================================
+   MODO LANDSCAPE PARA MÓVILES
+============================================= */
+@media (max-width: 896px) and (orientation: landscape) {
+    .intro-section {
+        padding: 3em 1rem;
+    }
+
+    .flip-card {
+        height: 360px;
+    }
+
+    .card-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.8rem;
+    }
+
+    .front-title {
+        font-size: 1.4rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .flip-card-back {
+        padding: 1.5rem 1rem;
+    }
+
+    .back-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .member-text {
+        font-size: 0.82rem;
+    }
+}
+
+
+
+/* ============================================
+    SESION DE GOBIERNO ESCOLAR RESPONSIVE DE PANTALLAS DE 250PX HASTA 1000PX
+============================================ */
+
+@media (max-width: 1000px) {
+    .intro-section {
+        padding: 4em 1rem;
+    }
+
+    .intro-text {
+        margin-bottom: 3rem;
+    }
+
+    .gobierno-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 3rem;
+    }
+}   
+

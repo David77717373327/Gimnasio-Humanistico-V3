@@ -1,0 +1,951 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Variables de Colores Suaves por Rol */
+    /* Colores suaves institucionales */
+    --jefe-color: #073558;
+    /* Azul suave */
+    --contador-color: #0d3f27;
+    /* Verde suave */
+    --secretaria-color: #ee6666;
+    /* Rosa suave */
+    --pagador-color: #a56725;
+    /* Naranja suave */
+    --apoyo-color: #9b87b8;
+    /* Morado suave */
+    --servicios-color: #6fb3b8;
+    /* Turquesa suave */
+    --docentes-color: #b8936b;
+    /* Café suave */
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/* Sección de Introducción */
+.intro-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem;
+}
+
+.intro-text {
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.85;
+    color: black;
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 1300px;
+    margin: 0 auto 4rem;
+    padding: 2rem 2.5rem;
+    background: white;
+}
+
+/* Grid de Equipo Administrativo */
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem 4rem;
+}
+
+.equipo-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.column-description {
+    font-size: clamp(0.9rem, 1.4vw, 0.95rem);
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    min-height: 45px;
+}
+
+/* FLIP CARD */
+.flip-card {
+    perspective: 1000px;
+    height: 400px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* FRONT - Colores específicos por rol */
+.flip-card-front {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Contenedor de Logo */
+.card-logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-white);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-logo img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover .card-logo img {
+    transform: scale(1.1);
+}
+
+/* Jefe de Administración */
+.equipo-column:nth-child(1) .flip-card-front {
+    border: 1px solid var(--medium-gray);
+}
+
+.equipo-column:nth-child(1) .hover-hint {
+    color: var(--jefe-color);
+}
+
+.equipo-column:nth-child(1) .flip-card-back {
+    border: 1px solid var(--medium-gray);
+}
+
+/* Contador */
+.equipo-column:nth-child(2) .flip-card-front {
+    border: 1px solid var(--medium-gray);
+}
+
+.equipo-column:nth-child(2) .hover-hint {
+    color: var(--contador-color);
+}
+
+.equipo-column:nth-child(2) .flip-card-back {
+    border: 1px solid var(--medium-gray);
+}
+
+/* Secretaria Académica */
+.equipo-column:nth-child(3) .flip-card-front {
+    border: 1px solid var(--medium-gray);
+}
+
+.equipo-column:nth-child(3) .hover-hint {
+    color: var(--secretaria-color);
+}
+
+.equipo-column:nth-child(3) .flip-card-back {
+    border: 1px solid var(--medium-gray);
+}
+
+/* Pagador - Tesorero */
+.equipo-column:nth-child(4) .flip-card-front {
+    border: 1px solid var(--medium-gray);
+}
+
+.equipo-column:nth-child(4) .hover-hint {
+    color: var(--pagador-color);
+}
+
+.equipo-column:nth-child(4) .flip-card-back {
+    border: 1px solid var(--medium-gray);
+}
+
+/* Maestra de Apoyo */
+.equipo-column:nth-child(5) .flip-card-front {
+    border: 1px solid var(--medium-gray);
+}
+
+.equipo-column:nth-child(5) .hover-hint {
+    color: var(--apoyo-color);
+}
+
+.equipo-column:nth-child(5) .flip-card-back {
+    border: 1px solid var(--medium-gray);
+}
+
+/* Servicios Generales */
+.equipo-column:nth-child(6) .flip-card-front {
+    border: 1px solid var(--medium-gray);
+}
+
+.equipo-column:nth-child(6) .hover-hint {
+    color: var(--servicios-color);
+}
+
+.equipo-column:nth-child(6) .flip-card-back {
+    border: 1px solid var(--medium-gray);
+}
+
+.flip-card:hover .flip-card-front {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.front-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.front-subtitle {
+    font-size: 1rem;
+    color: var(--text-medium);
+    text-align: center;
+    font-weight: 500;
+}
+
+.hover-hint {
+    position: absolute;
+    bottom: 25px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+/* BACK */
+.flip-card-back {
+    transform: rotateY(180deg);
+    padding: 2rem 1.75rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--bg-white);
+    margin-bottom: 1.25rem;
+    text-align: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-description {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--bg-white);
+    text-align: justify;
+    text-justify: inter-word;
+    flex: 1;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS GRANDES
+============================================= */
+@media (max-width: 1200px) {
+    .intro-section {
+        padding: 4.5rem 1.8rem 2.5rem;
+    }
+
+    .intro-text {
+        padding: 1.8rem 2.2rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .equipo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.2rem;
+        padding: 0 1.8rem 3.5rem;
+    }
+
+    .equipo-column.full-width {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .column-description {
+        min-height: 50px;
+    }
+
+    .flip-card {
+        height: 390px;
+    }
+
+    .card-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .front-title {
+        font-size: 1.65rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .back-title {
+        font-size: 1.3rem;
+    }
+
+    .back-description {
+        font-size: 0.88rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS MEDIANAS
+============================================= */
+@media (max-width: 992px) {
+    .intro-section {
+        padding: 4rem 1.6rem 2.2rem;
+    }
+
+    .intro-text {
+        padding: 1.6rem 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .equipo-grid {
+        gap: 2rem;
+        padding: 0 1.6rem 3rem;
+    }
+
+    .column-title {
+        margin-bottom: 0.7rem;
+    }
+
+    .column-description {
+        margin-bottom: 1.3rem;
+        min-height: auto;
+    }
+
+    .flip-card {
+        height: 385px;
+    }
+
+    .card-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .front-title {
+        font-size: 1.6rem;
+    }
+
+    .hover-hint {
+        bottom: 22px;
+        font-size: 0.78rem;
+    }
+
+    .flip-card-back {
+        padding: 1.9rem 1.65rem;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - TABLETS PEQUEÑAS
+============================================= */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 3.5rem 1.4rem 2rem;
+    }
+
+    .intro-text {
+        padding: 1.5rem 1.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.4rem 2.5rem;
+        max-width: 500px;
+    }
+    
+    .equipo-column.full-width {
+        grid-column: 1;
+    }
+
+    .column-title {
+        margin-bottom: 0.6rem;
+    }
+
+    .column-description {
+        margin-bottom: 1.2rem;
+    }
+
+    .flip-card {
+        height: 380px;
+    }
+
+    .card-logo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .front-title {
+        font-size: 1.5rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hover-hint {
+        bottom: 20px;
+        font-size: 0.76rem;
+    }
+
+    .flip-card-back {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .back-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .back-description {
+        font-size: 0.88rem;
+        line-height: 1.7;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES GRANDES
+============================================= */
+@media (max-width: 640px) {
+    .intro-section {
+        padding: 3rem 1.2rem 1.8rem;
+    }
+
+    .intro-text {
+        padding: 1.3rem 1.5rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .equipo-grid {
+        gap: 1.8rem;
+        padding: 0 1.2rem 2.2rem;
+    }
+
+    .column-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .column-description {
+        margin-bottom: 1rem;
+    }
+
+    .flip-card {
+        height: 370px;
+    }
+
+    .card-logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.9rem;
+    }
+
+    .card-logo img {
+        width: 82%;
+        height: 82%;
+    }
+
+    .front-title {
+        font-size: 1.45rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.93rem;
+    }
+
+    .hover-hint {
+        bottom: 18px;
+        font-size: 0.74rem;
+        gap: 5px;
+    }
+
+    .flip-card-back {
+        padding: 1.6rem 1.3rem;
+    }
+
+    .back-title {
+        font-size: 1.22rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .back-description {
+        font-size: 0.86rem;
+        line-height: 1.65;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES MEDIANOS
+============================================= */
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+
+    .intro-text {
+        padding: 1.2rem 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .equipo-grid {
+        gap: 1.6rem;
+        padding: 0 1rem 2rem;
+    }
+
+    .column-title {
+        margin-bottom: 0.4rem;
+    }
+
+    .column-description {
+        margin-bottom: 0.9rem;
+    }
+
+    .flip-card {
+        height: 360px;
+    }
+
+    .flip-card-front {
+        padding: 2.2rem 1.8rem;
+    }
+
+    .card-logo {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-logo img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .front-title {
+        font-size: 1.35rem;
+        line-height: 1.15;
+    }
+
+    .front-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hover-hint {
+        font-size: 0.72rem;
+        bottom: 16px;
+    }
+
+    .flip-card-back {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .back-title {
+        font-size: 1.18rem;
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.65rem;
+    }
+
+    .back-description {
+        font-size: 0.84rem;
+        line-height: 1.6;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES PEQUEÑOS
+============================================= */
+@media (max-width: 375px) {
+    .intro-section {
+        padding: 2.2rem 0.8rem 1.3rem;
+    }
+
+    .intro-text {
+        padding: 1.1rem 1.2rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .equipo-grid {
+        gap: 1.5rem;
+        padding: 0 0.8rem 1.8rem;
+    }
+
+    .flip-card {
+        height: 350px;
+    }
+
+    .flip-card-front {
+        padding: 2rem 1.5rem;
+    }
+
+    .card-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.7rem;
+    }
+
+    .front-title {
+        font-size: 1.3rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .hover-hint {
+        font-size: 0.7rem;
+        bottom: 15px;
+    }
+
+    .flip-card-back {
+        padding: 1.3rem 1.1rem;
+    }
+
+    .back-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .back-description {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MÓVILES MUY PEQUEÑOS
+============================================= */
+@media (max-width: 320px) {
+    .intro-section {
+        padding: 2rem 0.6rem 1.2rem;
+    }
+
+    .intro-text {
+        padding: 1rem 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .equipo-grid {
+        gap: 1.3rem;
+        padding: 0 0.6rem 1.5rem;
+    }
+
+    .flip-card {
+        height: 340px;
+    }
+
+    .flip-card-front {
+        padding: 1.8rem 1.3rem;
+    }
+
+    .card-logo {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 0.6rem;
+    }
+
+    .card-logo img {
+        width: 78%;
+        height: 78%;
+    }
+
+    .front-title {
+        font-size: 1.25rem;
+        line-height: 1.1;
+    }
+
+    .front-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hover-hint {
+        font-size: 0.68rem;
+        bottom: 14px;
+        gap: 4px;
+    }
+
+    .flip-card-back {
+        padding: 1.2rem 1rem;
+    }
+
+    .back-title {
+        font-size: 1.12rem;
+        margin-bottom: 0.7rem;
+        padding-bottom: 0.55rem;
+        border-bottom-width: 1.5px;
+    }
+
+    .back-description {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+/* =============================================
+   MODO LANDSCAPE PARA MÓVILES
+============================================= */
+@media (max-width: 896px) and (orientation: landscape) {
+    .intro-section {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .intro-text {
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .equipo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1.5rem 2rem;
+    }
+
+    .flip-card {
+        height: 340px;
+    }
+
+    .card-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.7rem;
+    }
+
+    .front-title {
+        font-size: 1.3rem;
+    }
+
+    .front-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .hover-hint {
+        bottom: 15px;
+        font-size: 0.7rem;
+    }
+
+    .flip-card-back {
+        padding: 1.3rem 1.1rem;
+    }
+
+    .back-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .back-description {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+}
+
+/* =============================================
+   INTERACCIÓN TÁCTIL PARA MÓVILES
+============================================= */
+@media (max-width: 768px) {
+    /* Deshabilitar hover y habilitar tap */
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+    
+    .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Mejorar área táctil */
+    .flip-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Optimizar scroll */
+    .flip-card-back {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Efecto hover deshabilitado en móviles */
+    .flip-card:hover .flip-card-front {
+        box-shadow: none;
+    }
+
+    .flip-card:hover .card-logo img {
+        transform: scale(1);
+    }
+}
+
+/* =============================================
+   OPTIMIZACIÓN DE RENDIMIENTO MÓVIL
+============================================= */
+@media (max-width: 768px) {
+    .flip-card-inner {
+        transition: transform 0.6s;
+    }
+
+    .card-logo,
+    .card-logo img {
+        transition: all 0.2s ease-out;
+    }
+
+    .flip-card-front {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

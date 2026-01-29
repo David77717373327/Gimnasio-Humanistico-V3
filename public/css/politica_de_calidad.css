@@ -1,0 +1,706 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    --dark-blue: #264653;
+    --deep-blue: #003366;
+    --soft-blue: #07346e;
+    --slate-blue: #3A506B;
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   SECCIÓN POLÍTICA DE CALIDAD
+============================================ */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+#policy-content .container {
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0;
+    width: 100%;
+}
+
+/* Grid de dos columnas */
+.policy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* Contenido de texto */
+.policy-text-content {
+    padding-right: 2rem;
+}
+
+.policy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.policy-intro {
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+    line-height: 1.7;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+    line-height: 1.5;
+    color: black;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.policy-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: black;
+    font-size: 2rem;
+    line-height: 1.8rem;
+}
+
+/* Contenedor de imagen */
+.policy-image-container {
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.policy-image {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+
+/* Resumen de política */
+.policy-summary {
+    padding: 0.58rem;
+    margin-top: 2rem;
+}
+
+.summary-text {
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    line-height: 1.9;
+    color: black;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - BREAKPOINTS PROGRESIVOS
+============================================ */
+
+/* Pantallas Extra Grandes (1400px - 1200px) */
+@media (max-width: 1400px) {
+    .main-content {
+        max-width: 1200px;
+        padding: 4.5rem 2rem;
+    }
+    
+    .policy-container {
+        gap: 2.8rem;
+    }
+    
+    .policy-image-container {
+        height: 500px;
+    }
+    
+    .policy-image {
+        height: 440px;
+    }
+}
+
+/* Laptops y Tablets Grandes (1200px - 992px) */
+@media (max-width: 1200px) {
+    .main-content {
+        max-width: 1000px;
+        padding: 4rem 1.8rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 1.5rem;
+    }
+    
+    .policy-container {
+        gap: 2.5rem;
+    }
+    
+    .policy-text-content {
+        padding-right: 1.5rem;
+    }
+    
+    .policy-image-container {
+        height: 480px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .policy-image {
+        height: 420px;
+    }
+}
+
+/* Tablets Landscape (992px - 768px) */
+@media (max-width: 992px) {
+    .main-content {
+        padding: 3.5rem 1.5rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 1.2rem;
+    }
+    
+    /* CAMBIO A UNA COLUMNA */
+    .policy-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .policy-text-content {
+        padding-right: 0;
+    }
+    
+    /* Imagen primero en móvil */
+    .policy-image-container {
+        order: -1;
+        height: 450px;
+        margin-bottom: 1rem;
+    }
+    
+    .policy-image {
+        height: 400px;
+    }
+    
+    .policy-title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .policy-summary {
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Tablets Portrait (768px - 576px) */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 3rem 1.2rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 1rem;
+    }
+    
+    .policy-container {
+        gap: 2.5rem;
+    }
+    
+    .policy-title {
+        margin-bottom: 1.3rem;
+    }
+    
+    .policy-intro,
+    .policy-item {
+        text-align: left;
+        line-height: 1.65;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .policy-item {
+        margin-bottom: 1rem;
+        padding-left: 1.8rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .policy-item::before {
+        font-size: 1.8rem;
+        line-height: 1.6rem;
+    }
+    
+    .policy-image-container {
+        height: 400px;
+    }
+    
+    .policy-image {
+        height: 360px;
+    }
+    
+    .policy-summary {
+        margin-top: 2rem;
+        padding: 1.3rem;
+    }
+    
+    .summary-text {
+        text-align: left;
+        line-height: 1.75;
+    }
+}
+
+/* Móviles Large (576px - 480px) */
+@media (max-width: 576px) {
+    .main-content {
+        padding: 2.5rem 1rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 0.8rem;
+    }
+    
+    .policy-container {
+        gap: 2rem;
+    }
+    
+    .policy-title {
+        margin-bottom: 1.2rem;
+    }
+    
+    .policy-intro {
+        margin-bottom: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .policy-item {
+        margin-bottom: 0.9rem;
+        padding-left: 1.6rem;
+    }
+    
+    .policy-item::before {
+        font-size: 1.6rem;
+        line-height: 1.5rem;
+    }
+    
+    .policy-image-container {
+        height: 350px;
+        border-radius: var(--border-radius-sm);
+    }
+    
+    .policy-image {
+        height: 320px;
+        border-radius: var(--border-radius-sm);
+    }
+    
+    .policy-summary {
+        padding: 1.2rem;
+        margin-top: 1.8rem;
+    }
+    
+    .summary-text {
+        line-height: 1.7;
+    }
+}
+
+/* Móviles Small (480px - 360px) */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 2rem 0.8rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 0.6rem;
+    }
+    
+    .policy-container {
+        gap: 1.8rem;
+    }
+    
+    .policy-title {
+        margin-bottom: 1rem;
+    }
+    
+    .policy-intro {
+        margin-bottom: 0.8rem;
+        line-height: 1.55;
+    }
+    
+    .policy-item {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .policy-item::before {
+        font-size: 1.5rem;
+        line-height: 1.4rem;
+    }
+    
+    .policy-image-container {
+        height: 300px;
+    }
+    
+    .policy-image {
+        height: 280px;
+    }
+    
+    .policy-summary {
+        padding: 1rem;
+        margin-top: 1.5rem;
+        border-left-width: 4px;
+    }
+    
+    .summary-text {
+        line-height: 1.65;
+    }
+}
+
+/* Móviles Extra Small (360px y menores) */
+@media (max-width: 360px) {
+    .main-content {
+        padding: 1.8rem 0.6rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 0.5rem;
+    }
+    
+    .policy-container {
+        gap: 1.5rem;
+    }
+    
+    .policy-title {
+        margin-bottom: 0.9rem;
+    }
+    
+    .policy-intro {
+        margin-bottom: 0.7rem;
+        line-height: 1.5;
+    }
+    
+    .policy-item {
+        margin-bottom: 0.7rem;
+        padding-left: 1.4rem;
+        line-height: 1.45;
+    }
+    
+    .policy-item::before {
+        font-size: 1.4rem;
+        line-height: 1.3rem;
+    }
+    
+    .policy-image-container {
+        height: 260px;
+    }
+    
+    .policy-image {
+        height: 240px;
+    }
+    
+    .policy-summary {
+        padding: 0.9rem;
+        margin-top: 1.3rem;
+        border-left-width: 3px;
+    }
+    
+    .summary-text {
+        line-height: 1.6;
+    }
+}
+
+/* ============================================
+   OPTIMIZACIONES ADICIONALES
+============================================ */
+
+/* Mejora de legibilidad en pantallas pequeñas */
+@media (max-width: 768px) {
+    .policy-intro,
+    .policy-item,
+    .summary-text {
+        hyphens: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Optimización para modo landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-content {
+        padding: 2rem 1rem;
+    }
+    
+    .policy-container {
+        gap: 2rem;
+    }
+    
+    .policy-image-container {
+        height: 320px;
+    }
+    
+    .policy-image {
+        height: 280px;
+    }
+    
+    .policy-title {
+        margin-bottom: 1rem;
+    }
+    
+    .policy-summary {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+/* Accesibilidad táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+    .policy-image {
+        transition: none;
+    }
+    
+    .policy-image:hover {
+        transform: none;
+    }
+}
+
+/* Optimización de imágenes en dispositivos móviles */
+@media (max-width: 576px) {
+    .policy-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Prevención de desbordamiento horizontal */
+@media (max-width: 576px) {
+    .main-content,
+    #policy-content .container,
+    .policy-container,
+    .policy-text-content {
+        overflow-x: hidden;
+    }
+}
+
+/* Optimización para tablets en orientación específica */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+    .policy-container {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Optimización para pantallas muy anchas */
+@media (min-width: 1600px) {
+    .main-content {
+        max-width: 1500px;
+    }
+    
+    .policy-container {
+        gap: 4rem;
+    }
+    
+    .policy-text-content {
+        padding-right: 3rem;
+    }
+    
+    .policy-image-container {
+        height: 560px;
+    }
+    
+    .policy-image {
+        height: 500px;
+    }
+}
+
+/* Mejora de contraste para accesibilidad */
+@media (prefers-contrast: high) {
+    .policy-intro,
+    .policy-item,
+    .summary-text {
+        text-shadow: none;
+        font-weight: 500;
+    }
+}
+
+/* Reducción de animaciones para usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .policy-image {
+        transition: none;
+    }
+}
+
+/* Ajuste fino para dispositivos con pantallas muy estrechas */
+@media (max-width: 320px) {
+    .main-content {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    #policy-content .container {
+        padding: 0 0.4rem;
+    }
+    
+    .policy-title {
+        font-size: 1.5rem;
+    }
+    
+    .policy-intro,
+    .policy-item,
+    .summary-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .policy-item {
+        padding-left: 1.2rem;
+    }
+    
+    .policy-item::before {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    
+    .policy-image-container {
+        height: 240px;
+    }
+    
+    .policy-image {
+        height: 220px;
+    }
+    
+    .policy-summary {
+        padding: 0.8rem;
+    }
+}
+
+/* Optimización para tablets grandes en landscape */
+@media (min-width: 992px) and (max-width: 1200px) and (orientation: landscape) {
+    .policy-image-container {
+        height: 450px;
+    }
+    
+    .policy-image {
+        height: 400px;
+    }
+}
+
+/* Mejor espaciado para listas en móviles */
+@media (max-width: 480px) {
+    .policy-list {
+        margin-top: 0.5rem;
+    }
+    
+    .policy-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Ajuste del título en pantallas muy pequeñas */
+@media (max-width: 375px) {
+    .policy-title {
+        word-break: break-word;
+    }
+}

@@ -1,0 +1,2636 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;  
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;  
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;  
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;  
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;  
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;  
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+
+/* ============================================
+   NAVEGACIÓN INTERNA DE ADMISIÓN – UI/UX LIMPIO
+============================================ */
+
+.admision-nav-section {
+    background-color: #ffffff;
+    padding: 5rem 0 5.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalles suaves de fondo */
+.admision-nav-section::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    right: -12%;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(13,63,39,0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.admision-nav-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -8%;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(244,185,66,0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* ============================================
+   LAYOUT PRINCIPAL
+============================================ */
+
+.admision-nav-layout {
+    display: flex;
+    gap: 1.8rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem 1.2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.admision-nav-layout::-webkit-scrollbar {
+    height: 6px;
+}
+
+.admision-nav-layout::-webkit-scrollbar-thumb {
+    background: rgba(4, 14, 9, 0.35);
+    border-radius: 10px;
+    
+}
+
+.nav-grid-main,
+.nav-grid-secondary {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* ============================================
+   CARD BASE – ALINEACIÓN VERTICAL NATURAL
+============================================ */
+
+.nav-card-featured {
+    position: relative;
+    width: 300px;
+    min-width: 300px;
+    height: 210px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* ============================================
+   IMAGEN DE FONDO
+============================================ */
+
+.admision-bg {
+    position: relative;
+    filter: brightness(1.5);
+}
+
+.admision-bg-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* Imágenes */
+.admision-bg--requisitos .admision-bg-image {
+    background-image: url('../images/requisitos.webp');
+}
+
+.admision-bg--rutas .admision-bg-image {
+    background-image: url('../images/iniciooo1.jpg');
+}
+
+.admision-bg--horarios .admision-bg-image {
+    background-image: url('../images/relot.jpg');
+}
+
+.admision-bg--modalidades .admision-bg-image {
+    background-image: url('../images/imagen5.jpg');
+}
+
+/* ============================================
+   OVERLAY
+============================================ */
+
+.admision-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: 1;
+}
+
+/* ============================================
+   CONTENIDO – FLUJO VERTICAL CONTINUO
+============================================ */
+
+.featured-header,
+.featured-content,
+.featured-action {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   ICONO
+============================================ */
+
+.featured-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.featured-icon {
+    width: 20px;
+    height: 20px;
+    color: #CFE8DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+}
+
+/* ============================================
+   CONTENIDO PRINCIPAL
+============================================ */
+
+.featured-content {
+    margin-top: 50px;
+}
+
+/* ============================================
+   TÍTULO
+============================================ */
+
+.featured-title {
+    color: #CFE8DB;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1;
+}
+
+/* ============================================
+   ACCIÓN
+============================================ */
+
+.featured-action {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.action-text {
+    color: #CFE8DB;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.action-arrow {
+    width: 30px;
+    height: 30px;
+    background: rgba(255,255,255,0.25);
+    color: #CFE8DB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* ============================================
+   HOVER
+============================================ */
+
+.nav-card-featured:hover {
+    transform: translateY(-6px);
+}
+
+.nav-card-featured:hover .action-arrow {
+    transform: translateX(6px);
+    background: rgba(255,255,255,0.35);
+}
+
+/* ============================================
+   ACCESIBILIDAD
+============================================ */
+
+.nav-card-featured:focus {
+    outline: 2px solid rgba(255,255,255,0.65);
+    outline-offset: 3px;
+}
+
+
+/* Header Section */
+.admision-nav-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, rgba(244, 185, 66, 0.12) 0%, rgba(244, 185, 66, 0.08) 100%);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(244, 185, 66, 0.25);
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.1);
+}
+
+.label-icon {
+    color: #f4b942;
+    font-size: 0.85rem;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.08); }
+}
+
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-green, #0d3f27);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.admision-nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--primary-green, #0d3f27);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.admision-nav-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.09rem;
+    color: var(--text-darkk);
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+
+
+/* Wrapper para logo y contenido */
+.header-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin-left: 70px;
+}
+
+/* Contenedor del texto */
+.header-text-content {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+
+
+
+
+
+
+
+/* SOLUCIÓN PARA SCROLL OFFSET - Agregar después de las variables */
+#costos-educativos,
+#horarios-atencion,
+#ruta-admision,
+#modalidades {
+    scroll-margin-top: 60px; /* Ajusta este valor según la altura de tu header */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   SECCIÓN HORARIOS DE ATENCIÓN
+   Diseño profesional y moderno
+============================================ */
+
+.horarios-atencion-section {
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.horarios-atencion-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(13, 63, 39, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Grid de horarios */
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    
+}
+
+/* Cards de horario */
+.horario-card {
+    background: white; 
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    border: solid 1px rgb(212, 211, 211);
+    position: relative;
+    overflow: hidden;
+}
+
+.horario-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-green);
+}
+
+
+
+/* Card destacada - OFICINA ADMINISTRATIVA */
+.horario-card-featured {
+    border: solid 1px rgb(212, 211, 211);
+    background: linear-gradient(135deg, var(--white) 0%, #fffef8 100%);
+}
+
+.horario-card-featured::before {
+    background: linear-gradient(90deg, var(--accent-gold), var(--dark-gold));
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gradient-gold);
+    color: var(--white);
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--border-radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.featured-badge i {
+    font-size: 0.75rem;
+}
+
+/* Header de la card */
+.horario-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(172, 170, 170);
+}
+
+.horario-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
+}
+
+
+
+
+
+
+.horario-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+
+/* Body de la card */
+.horario-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: transparent;
+}
+
+.horario-label {
+    font-weight: 500;
+    color: black;
+    font-size: 0.95rem;
+}
+
+.horario-time {
+    font-weight: 600;
+    color: black;
+    font-size: 1rem;
+}
+
+/* Footer de la card */
+.horario-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(172, 170, 170);
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.horario-card-footer i {
+    color: var(--primary-green);
+    font-size: 1rem;
+}
+/* Información adicional */
+.horarios-info-adicional {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* CARD */
+.info-card {
+    border: 1px solid rgb(212, 211, 211);
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    border-radius: 6px;
+}
+
+/* ICONO */
+.info-card i {
+    font-size: 1.6rem;
+    color: var(--primary-green);
+    flex-shrink: 0;
+}
+
+/* TEXTO */
+.info-content h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.info-content p {
+    margin: 0.2rem 0 0;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* =================== RESPONSIVE =================== */
+
+/* TABLETS (769px - 992px) */
+@media (max-width: 992px) {
+    .horarios-info-adicional {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+}
+
+/* TABLETS PEQUEÑAS (577px - 768px) */
+@media (max-width: 768px) {
+    .horarios-info-adicional {
+        gap: 0.7rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .info-card {
+        padding: 0.6rem 0.75rem;
+        gap: 0.65rem;
+    }
+
+    .info-card i {
+        font-size: 1.3rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.82rem;
+    }
+
+    .info-content p {
+        font-size: 0.76rem;
+    }
+}
+
+/* MÓVILES GRANDES (481px - 576px) */
+@media (max-width: 576px) {
+    .horarios-info-adicional {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .info-card {
+        padding: 0.5rem 0.7rem;
+        gap: 0.6rem;
+    }
+
+    .info-card i {
+        font-size: 1.2rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.78rem;
+    }
+
+    .info-content p {
+        font-size: 0.73rem;
+        line-height: 1.3;
+        margin-top: 0.15rem;
+    }
+}
+
+/* MÓVILES MEDIANOS (376px - 480px) */
+@media (max-width: 480px) {
+    .horarios-info-adicional {
+        gap: 0.55rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-card {
+        padding: 0.45rem 0.65rem;
+        gap: 0.55rem;
+        border-radius: 5px;
+    }
+
+    .info-card i {
+        font-size: 1.15rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.75rem;
+        line-height: 1.25;
+    }
+
+    .info-content p {
+        font-size: 0.7rem;
+        margin-top: 0.1rem;
+    }
+}
+
+/* MÓVILES PEQUEÑOS (321px - 375px) */
+@media (max-width: 375px) {
+    .horarios-info-adicional {
+        gap: 0.5rem;
+    }
+
+    .info-card {
+        padding: 0.4rem 0.6rem;
+        gap: 0.5rem;
+    }
+
+    .info-card i {
+        font-size: 1.1rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.72rem;
+    }
+
+    .info-content p {
+        font-size: 0.68rem;
+    }
+}
+
+/* MÓVILES MUY PEQUEÑOS (260px - 320px) */
+@media (max-width: 320px) {
+    .horarios-info-adicional {
+        gap: 0.45rem;
+    }
+
+    .info-card {
+        padding: 0.35rem 0.55rem;
+        gap: 0.45rem;
+        border-radius: 4px;
+    }
+
+    .info-card i {
+        font-size: 1rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .info-content p {
+        font-size: 0.65rem;
+        line-height: 1.25;
+        margin-top: 0.08rem;
+    }
+}
+
+/* ESCRITORIO GRANDE (1200px+) */
+@media (min-width: 1200px) {
+    .horarios-info-adicional {
+        gap: 1.2rem;
+    }
+
+    .info-card {
+        padding: 1rem 1.2rem;
+        gap: 1rem;
+    }
+
+    .info-card i {
+        font-size: 1.8rem;
+    }
+
+    .info-content h4 {
+        font-size: 1rem;
+    }
+
+    .info-content p {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .horarios-info-adicional {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+
+    .info-card {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .info-card i {
+        font-size: 1.1rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.75rem;
+    }
+
+    .info-content p {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+
+
+
+.info-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.3rem;
+}
+
+.info-content p {
+    font-size: 0.95rem;
+    color: black;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   SECCIÓN REQUISITOS - DISEÑOS COMPACTOS Y ELEGANTES
+   Contenido condensado sin verse encajonado
+============================================ */
+
+/* ========== OPCIÓN 1: DISEÑO EN COLUMNAS COMPACTAS ========== */
+.requisitos-section {
+    padding: 2.5rem 0;
+    background: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.requisitos-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.requisitos-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.requisitos-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.modalidad-container {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 2rem;
+}
+
+.modalidad-container:last-child {
+    border-bottom: none;
+}
+
+/* Header compacto en línea */
+.modalidad-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modalidad-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--light-gray);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.modalidad-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modalidad-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.modalidad-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: var(--text-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+/* Contenido en 2 columnas balanceadas */
+.modalidad-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+}
+
+.info-card {
+    background: transparent;
+}
+
+.info-section {
+    margin-bottom: 1.25rem;
+}
+
+.info-section:last-child {
+    margin-bottom: 0;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-header i {
+    color: var(--primary-green);
+    font-size: 1rem;
+}
+
+.info-header h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-detail {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin: 0;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.requisitos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.requisitos-list li {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    padding: 0.35rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.requisitos-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+/* ========== OPCIÓN 2: DISEÑO TIPO TABLA LIMPIA ========== */
+.modalidad-container.style-table .modalidad-content {
+    display: block;
+}
+
+.modalidad-container.style-table .info-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem 2rem;
+    align-items: start;
+}
+
+.modalidad-container.style-table .info-section {
+    margin-bottom: 0;
+}
+
+.modalidad-container.style-table .info-header {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 0.4rem 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+}
+
+.modalidad-container.style-table .info-header i {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.modalidad-container.style-table .info-header h4 {
+    color: var(--white);
+    font-size: 0.85rem;
+}
+
+.modalidad-container.style-table .info-detail,
+.modalidad-container.style-table .requisitos-list {
+    padding-left: 0.75rem;
+}
+
+.modalidad-container.style-table .requisitos-list li {
+    font-size: 0.8rem;
+    padding: 0.3rem 0 0.3rem 1rem;
+}
+
+
+
+
+
+
+/* ============================================
+   RESPONSIVE DESIGN - SECCIÓN REQUISITOS
+   Adaptación fluida para todos los dispositivos
+============================================ */
+
+/* Tablets grandes y pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .requisitos-title {
+        font-size: 1.75rem;
+    }
+    
+    .modalidad-content {
+        gap: 1.5rem 2rem;
+    }
+    
+    .modalidad-container.style-table .info-card {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.25rem 1.5rem;
+    }
+}
+
+/* Tablets (hasta 768px) */
+@media (max-width: 768px) {
+    .requisitos-section {
+        padding: 2rem 0;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .requisitos-header {
+        margin-bottom: 2rem;
+    }
+    
+    .requisitos-title {
+        font-size: 1.5rem;
+    }
+    
+    .requisitos-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .modalidad-container {
+        margin-bottom: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+    
+    /* Header en línea - SIEMPRE */
+    .modalidad-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    
+    .modalidad-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .modalidad-title {
+        font-size: 1.3rem;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .modalidad-badge {
+        margin-left: 0;
+        flex-basis: 100%;
+    }
+    
+    /* Contenido en 1 columna */
+    .modalidad-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .modalidad-container.style-table .info-card {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+/* Móviles grandes (hasta 480px) */
+@media (max-width: 480px) {
+    .requisitos-section {
+        padding: 1.5rem 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .requisitos-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .requisitos-title {
+        font-size: 1.35rem;
+        letter-spacing: -0.3px;
+    }
+    
+    .requisitos-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .modalidad-container {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    /* Header en línea - logo y título juntos */
+    .modalidad-header {
+        gap: 0.65rem;
+        flex-wrap: wrap;
+    }
+    
+    .modalidad-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+    }
+    
+    .modalidad-title {
+        font-size: 1.15rem;
+        line-height: 1.3;
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .modalidad-badge {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+        flex-basis: 100%;
+        width: fit-content;
+    }
+    
+    /* Contenido optimizado para móvil */
+    .modalidad-content {
+        gap: 1.25rem;
+    }
+    
+    .info-section {
+        margin-bottom: 1rem;
+    }
+    
+    .info-header {
+        gap: 0.4rem;
+    }
+    
+    .info-header i {
+        font-size: 0.9rem;
+    }
+    
+    .info-header h4 {
+        font-size: 0.85rem;
+    }
+    
+    .info-detail {
+        font-size: 0.8rem;
+        padding-left: 1.3rem;
+    }
+    
+    .requisitos-list {
+        padding-left: 1.3rem;
+    }
+    
+    .requisitos-list li {
+        font-size: 0.8rem;
+        padding: 0.3rem 0;
+        padding-left: 1.1rem;
+    }
+    
+    .requisitos-list li::before {
+        font-size: 1rem;
+    }
+    
+    /* Estilo tabla en móvil */
+    .modalidad-container.style-table .info-header {
+        padding: 0.35rem 0.6rem;
+    }
+    
+    .modalidad-container.style-table .info-header h4 {
+        font-size: 0.8rem;
+    }
+    
+    .modalidad-container.style-table .info-detail,
+    .modalidad-container.style-table .requisitos-list {
+        padding-left: 0.6rem;
+    }
+    
+    .modalidad-container.style-table .requisitos-list li {
+        font-size: 0.75rem;
+        padding: 0.25rem 0 0.25rem 0.9rem;
+    }
+}
+
+/* Móviles pequeños (hasta 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .requisitos-title {
+        font-size: 1.2rem;
+    }
+    
+    .requisitos-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    /* Logo y título en línea incluso en pantallas muy pequeñas */
+    .modalidad-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .modalidad-title {
+        font-size: 1rem;
+        min-width: 120px;
+    }
+    
+    .modalidad-content {
+        gap: 1rem;
+    }
+    
+    .info-detail,
+    .requisitos-list li {
+        font-size: 0.75rem;
+    }
+}
+
+/* Mejoras de UX para táctil */
+@media (hover: none) and (pointer: coarse) {
+    .modalidad-header {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .info-section {
+        /* Espaciado táctil mejorado */
+        padding: 0.25rem 0;
+    }
+    
+    .requisitos-list li {
+        padding: 0.4rem 0;
+        padding-left: 1.1rem;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .requisitos-section {
+        padding: 1.5rem 0;
+    }
+    
+    .modalidad-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 1.5rem;
+    }
+    
+    .modalidad-icon {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .modalidad-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================================
+Estilos del Carrusel 3D - Admisiones 
+========================================*/
+
+
+.admisiones-carousel-section {
+    background: url("../images/dansas.jpg") no-repeat center center/cover;
+    padding: 20px 20px 120px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admisiones-carousel-section {
+    padding: 20px 20px 120px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.header-section {
+    text-align: center;
+    animation: fadeInDown 0.8s ease;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: white;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.progress-counter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 0 0 18px 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-card {
+    position: absolute;
+    width: 380px;
+    height: 390px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 32px 32px;
+    box-shadow: 0 10px 40px rgba(13, 63, 39, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    left: 50%;
+    top: 50%;
+    margin-left: -190px;
+    margin-top: -240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid rgba(13, 63, 39, 0.08);
+    overflow: hidden;
+}
+
+.carousel-card.active {
+    z-index: 10;
+    transform: translateX(0) translateZ(0) scale(1);
+    opacity: 1;
+    box-shadow: 0 20px 60px rgba(13, 63, 39, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-card.prev {
+    z-index: 5;
+    transform: translateX(-420px) translateZ(-300px) scale(0.72);
+    opacity: 0.5;
+    filter: blur(1.5px);
+}
+
+.carousel-card.next {
+    z-index: 5;
+    transform: translateX(420px) translateZ(-300px) scale(0.72);
+    opacity: 0.5;
+    filter: blur(1.5px);
+}
+
+.carousel-card.hidden {
+    z-index: 0;
+    transform: translateX(0) translateZ(-500px) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-category-badge {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 16px;
+    background: #0d3f27;
+    color: #ffffff;
+    border-radius: 50px;
+    margin: 0 0 24px 0;
+    align-self: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.card-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(2, 20, 12, 0.03);
+    position: absolute;
+    top: -10px;
+    right: 1px;
+    line-height: 1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0d3f27;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    position: relative;
+    z-index: 5;
+}
+
+.card-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #1a1a1a;
+    text-align: justify;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+    flex-grow: 1;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 16px;
+    z-index: 20;
+}
+
+.control-btn {
+    width: 56px;
+    height: 56px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    color: black;
+    font-weight: 400;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(13, 63, 39, 0.1);
+    padding: 0;
+    outline: none;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: white;
+    color: black;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(13, 63, 39, 0.25);
+}
+
+.control-btn:active:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(13, 63, 39, 0.2);
+}
+
+.control-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    border-color: #cccccc;
+    color: #cccccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background: #f5f5f5;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   Sistema de breakpoints profesional
+============================================ */
+
+/* ============================================
+   TABLET GRANDE Y LAPTOP PEQUEÑA (1024px - 1199px)
+============================================ */
+@media (max-width: 1199px) {
+    /* SOLO RUTA DE ADMISIÓN */
+    .admision-nav-layout {
+        max-width: 100%;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .nav-card-featured,
+    .nav-card-compact {
+        width: 280px;
+        min-width: 280px;
+        padding: 1.8rem 1.5rem;
+    }
+
+    /* SOLO HORARIOS DE ATENCIÓN */
+    .horarios-grid {
+        gap: 1.8rem;
+    }
+
+    .horario-card {
+        padding: 1.8rem;
+    }
+}
+
+/* ============================================
+   TABLET (768px - 1023px)
+============================================ */
+@media (max-width: 1023px) {
+    /* Sección de navegación de admisión */
+    .admision-nav-section {
+        padding: 4rem 0 1rem;
+    }
+
+    .admision-nav-section::before,
+    .admision-nav-section::after {
+        width: 400px;
+        height: 400px;
+    }
+
+    .header-content-wrapper {
+        margin-left: 0;
+        gap: 1.5rem;
+    }
+
+    .admision-nav-title {
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    }
+
+    .admision-nav-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Layout de navegación */
+    .admision-nav-layout {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-green) var(--light-gray);
+    }
+
+    .admision-nav-layout::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .admision-nav-layout::-webkit-scrollbar-track {
+        background: var(--light-gray);
+        border-radius: 4px;
+    }
+
+    .admision-nav-layout::-webkit-scrollbar-thumb {
+        background: var(--primary-green);
+        border-radius: 4px;
+    }
+
+    .nav-card-featured,
+    .nav-card-compact {
+        width: 260px;
+        min-width: 260px;
+    }
+
+    /* Horarios */
+    .horarios-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .horario-card-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .horario-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    /* Carrusel */
+    .carousel-container {
+        height: 450px;
+        padding: 0 15px;
+    }
+
+    .carousel-card {
+        width: 320px;
+        height: 360px;
+        padding: 32px 24px 24px;
+        margin-left: -160px;
+        margin-top: -225px;
+    }
+
+    .carousel-card.prev {
+        transform: translateX(-350px) translateZ(-250px) scale(0.65);
+    }
+
+    .carousel-card.next {
+        transform: translateX(350px) translateZ(-250px) scale(0.65);
+    }
+
+    .card-number {
+        font-size: 80px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .carousel-indicators {
+        bottom: -140px;
+    }
+}
+
+/* ============================================
+   MÓVIL GRANDE (576px - 767px)
+============================================ */
+@media (max-width: 767px) {
+    /* Variables ajustadas para móvil */
+    :root {
+        --section-padding: 3rem 0;
+        --container-padding: 0 1rem;
+    }
+
+    /* Sección de navegación */
+    .admision-nav-section {
+        padding: 3rem 0 1rem;
+    }
+
+    .admision-nav-section::before,
+    .admision-nav-section::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .admision-nav-header {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .header-label {
+        padding: 0.35rem 0.85rem;
+    }
+
+    .label-text {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    .header-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 0;
+    }
+
+    .admision-nav-title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .admision-nav-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Cards de navegación */
+    .admision-nav-layout {
+        gap: 1rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .nav-card-featured,
+    .nav-card-compact {
+        width: 280px;
+        min-width: 280px;
+        padding: 1.5rem 1.3rem;
+    }
+
+    .featured-badge {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.6rem;
+    }
+
+    .featured-icon,
+    .compact-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+
+    .featured-title,
+    .compact-title {
+        font-size: 1rem;
+    }
+
+    .featured-description,
+    .compact-description {
+        font-size: 0.85rem;
+    }
+
+    /* Horarios */
+    .horarios-atencion-section {
+        padding-top: 3rem;
+        padding-bottom: 0.12rem;
+    }
+
+    .horarios-grid {
+        gap: 1.2rem;
+    }
+
+    .horario-card {
+        padding: 1.5rem;
+    }
+
+    .horario-card-header {
+        margin-bottom: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .horario-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .horario-card-title {
+        font-size: 1.1rem;
+    }
+
+    .horario-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        padding: 0.6rem;
+    }
+
+    .horario-label,
+    .horario-time {
+        font-size: 0.9rem;
+    }
+
+    .horarios-info-adicional {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+  
+    /* Carrusel */
+    .admisiones-carousel-section {
+        padding: 20px 15px 100px;
+        min-height: 45vh;
+    }
+
+    .main-title {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .progress-counter {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .carousel-container {
+        height: 420px;
+        padding: 0 10px;
+    }
+
+    .carousel-card {
+        width: 300px;
+        height: 350px;
+        padding: 30px 22px 22px;
+        margin-left: -150px;
+        margin-top: -210px;
+    }
+
+    .carousel-card.prev,
+    .carousel-card.next {
+        transform: translateX(-320px) translateZ(-220px) scale(0.6);
+        opacity: 0.4;
+    }
+
+    .card-category-badge {
+        font-size: 0.65rem;
+        padding: 7px 14px;
+        margin-bottom: 20px;
+    }
+
+    .card-number {
+        font-size: 70px;
+        top: -5px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .carousel-controls {
+        bottom: 5px;
+        gap: 12px;
+    }
+
+    .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .carousel-indicators {
+        bottom: -130px;
+        gap: 6px;
+    }
+}
+
+/* ============================================
+   MÓVIL PEQUEÑO (320px - 575px)
+============================================ */
+@media (max-width: 575px) {
+    /* Ajustes generales */
+    :root {
+        --section-padding: 2.5rem 0;
+    }
+
+    /* Navegación de admisión */
+    .admision-nav-section {
+        padding: 2.5rem 0 1rem;
+    }
+
+    .admision-nav-title {
+        font-size: 1.5rem;
+    }
+
+    .admision-nav-subtitle {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    /* Cards más pequeñas para pantallas muy pequeñas */
+    .nav-card-featured,
+    .nav-card-compact {
+        width: 260px;
+        min-width: 260px;
+        padding: 1.3rem 1.1rem;
+    }
+
+
+
+    .featured-icon,
+    .compact-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .featured-title,
+    .compact-title {
+        font-size: 0.95rem;
+    }
+
+    .featured-description,
+    .compact-description {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .action-arrow,
+    .compact-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+
+    /* Horarios */
+    .horario-card {
+        padding: 1.2rem;
+    }
+
+    .horario-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .horario-card-title {
+        font-size: 1rem;
+    }
+
+    
+
+    /* Carrusel */
+    .carousel-container {
+        height: 400px;
+    }
+
+    .carousel-card {
+        width: 280px;
+        height: 340px;
+        padding: 28px 20px 20px;
+        margin-left: -140px;
+        margin-top: -200px;
+    }
+
+    .carousel-card.prev,
+    .carousel-card.next {
+        transform: translateX(-300px) translateZ(-200px) scale(0.55);
+        opacity: 0.3;
+    }
+
+    .card-number {
+        font-size: 60px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    .control-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .indicator.active {
+        width: 32px;
+        height: 8px;
+    }
+}
+
+/* ============================================
+   MÓVIL MUY PEQUEÑO (menos de 375px)
+============================================ */
+@media (max-width: 374px) {
+    .admision-nav-title {
+        font-size: 1.3rem;
+    }
+
+
+    .admision-nav-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .nav-card-featured,
+    .nav-card-compact {
+        width: 240px;
+        min-width: 240px;
+        padding: 1.2rem 1rem;
+    }
+
+    .carousel-card {
+        width: 260px;
+        height: 330px;
+        padding: 25px 18px 18px;
+        margin-left: -130px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .control-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================
+   UTILIDADES RESPONSIVE
+============================================ */
+
+/* Ocultar scroll horizontal en body */
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Espaciado consistente */
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Imágenes responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ============================================
+   ORIENTACIÓN LANDSCAPE EN MÓVILES
+============================================ */
+@media (max-width: 767px) and (orientation: landscape) {
+    .carousel-container {
+        height: 350px;
+    }
+
+    .carousel-card {
+        height: 300px;
+        padding: 25px 20px 20px;
+    }
+
+    .admisiones-carousel-section {
+        padding: 15px 10px 80px;
+    }
+
+    .carousel-indicators {
+        bottom: -100px;
+    }
+}
+
+/* ============================================
+   TOUCH OPTIMIZATIONS
+============================================ */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar área de toque para botones */
+    .control-btn,
+    .indicator {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* Mejorar feedback táctil */
+    .nav-card-featured:active,
+    .nav-card-compact:active {
+        transform: scale(0.98);
+    }
+
+    .control-btn:active:not(:disabled) {
+        transform: scale(0.95);
+    }
+
+    /* Remover efectos hover en dispositivos táctiles */
+    .nav-card-featured:hover,
+    .nav-card-compact:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03), 0 6px 20px rgba(13, 63, 39, 0.04);
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Opcional)
+============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Puedes agregar estilos para modo oscuro aquí si lo necesitas */
+    /* Ejemplo:
+    .nav-card-featured,
+    .nav-card-compact {
+        background: #1a1a1a;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    */
+}
+
+/* ============================================
+   ANIMACIONES REDUCIDAS (Accesibilidad)
+============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   Adaptación profesional para todos los dispositivos
+============================================ */
+
+/* Tablets grandes y pantallas medianas (hasta 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .costos-title {
+        font-size: 2.2rem;
+    }
+
+    .modalidad-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modalidad-title {
+        font-size: 1.35rem;
+    }
+
+    .costos-table th,
+    .costos-table td {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablets (hasta 768px) */
+@media screen and (max-width: 768px) {
+    .costos-educativos-section {
+        padding: 0.75rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .costos-header {
+        margin-bottom: 2rem;
+    }
+
+    .costos-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.3px;
+    }
+
+    .costos-subtitle {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    .modalidad-container {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .modalidad-header {
+        flex-wrap: wrap;
+        padding: 0.65rem 0.85rem;
+        gap: 0.75rem;
+    }
+
+    .modalidad-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .modalidad-title {
+        font-size: 1.25rem;
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .modalidad-badge {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .modalidad-content {
+        gap: 1.25rem;
+    }
+
+    .costos-table-wrapper {
+        margin: 0 -1rem;
+        padding: 0 1rem;
+    }
+
+    .costos-table th {
+        padding: 0.65rem 0.65rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.2px;
+    }
+
+    .costos-table td {
+        padding: 0.65rem 0.65rem;
+        font-size: 0.85rem;
+    }
+
+    .info-card {
+        padding: 1rem;
+    }
+
+    .info-section {
+        margin-bottom: 1rem;
+        padding-bottom: 0.85rem;
+    }
+
+    .info-header {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-header h4 {
+        font-size: 0.9rem;
+    }
+
+    .info-detail {
+        font-size: 0.85rem;
+        padding-left: 1.5rem;
+    }
+
+    .requisitos-list {
+        padding-left: 1.5rem;
+    }
+
+    .requisitos-list li {
+        font-size: 0.8rem;
+        padding: 0.2rem 0;
+    }
+}
+
+/* Móviles grandes (hasta 576px) */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .costos-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .costos-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .modalidad-header {
+        padding: 0.5rem 0.65rem;
+        gap: 0.6rem;
+    }
+
+    .modalidad-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .modalidad-title {
+        font-size: 1.1rem;
+    }
+
+    .modalidad-badge {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.65rem;
+    }
+
+    .costos-table-wrapper {
+        margin: 0 -0.75rem;
+        padding: 0 0.75rem;
+    }
+
+    .costos-table th {
+        padding: 0.5rem 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .costos-table td {
+        padding: 0.5rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .costos-table .precio {
+        white-space: nowrap;
+    }
+
+    .info-card {
+        padding: 0.85rem;
+    }
+
+    .info-header {
+        gap: 0.45rem;
+    }
+
+    .info-header i {
+        font-size: 1rem;
+    }
+
+    .info-header h4 {
+        font-size: 0.85rem;
+    }
+
+    .info-detail {
+        font-size: 0.8rem;
+        padding-left: 1.35rem;
+    }
+
+    .requisitos-list {
+        padding-left: 1.35rem;
+    }
+
+    .requisitos-list li {
+        font-size: 0.75rem;
+    }
+
+    .requisitos-list li::before {
+        left: -1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Móviles pequeños (hasta 375px) */
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .costos-title {
+        font-size: 1.4rem;
+    }
+
+    .costos-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .modalidad-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .modalidad-title {
+        font-size: 1rem;
+    }
+
+    .costos-table th {
+        padding: 0.45rem 0.3rem;
+        font-size: 0.65rem;
+    }
+
+    .costos-table td {
+        padding: 0.45rem 0.3rem;
+        font-size: 0.75rem;
+    }
+
+    .info-header h4 {
+        font-size: 0.8rem;
+    }
+
+    .info-detail {
+        font-size: 0.75rem;
+    }
+
+    .requisitos-list li {
+        font-size: 0.7rem;
+    }
+}
+
+/* Modo landscape para móviles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .costos-educativos-section {
+        padding: 0.5rem 0;
+    }
+
+    .costos-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .modalidad-container {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .info-section {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.65rem;
+    }
+}
+
+/* Optimización para impresión */
+@media print {
+    .costos-educativos-section {
+        padding: 0;
+    }
+
+    .modalidad-header {
+        break-inside: avoid;
+    }
+
+    .modalidad-content {
+        grid-template-columns: 1fr;
+    }
+
+    .costos-table {
+        font-size: 0.8rem;
+    }
+}

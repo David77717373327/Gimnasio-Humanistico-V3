@@ -1,0 +1,3527 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL MEJORADA
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/* Tipografía moderna */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   HERO SECTION - VIDEO DE FONDO PROFESIONAL
+   Optimizado para UI/UX empresarial
+============================================ */
+
+.hero-banner {
+    position: relative;
+    min-height: 95vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    /* Fallback mientras carga el video */
+}
+
+
+
+
+.hero-bg-video.loaded {
+    opacity: 1;
+    /* cuando carga, aparece suavemente */
+}
+
+
+
+
+
+/* ============================================
+   CONTENEDOR DE VIDEO
+============================================ */
+.hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Fallback image cuando el video no carga */
+.hero-fallback-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ============================================
+   OVERLAYS PARA LEGIBILIDAD
+============================================ */
+
+/* Overlay base para controlar brillo del video */
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Degradado dinámico para mejor legibilidad del texto */
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.1) 30%,
+            rgba(0, 0, 0, 0.6) 70%,
+            rgba(0, 0, 0, 0.5) 90%,
+            rgba(0, 0, 0, 0.5) 100%);
+    z-index: 3;
+}
+
+
+
+
+/* ============================================
+   CONTENIDO DEL HERO
+============================================ */
+.hero-content {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    color: #ffffff;
+    padding: 0;
+    margin-top: 80px;
+    /* Espacio para navbar */
+}
+
+.hero-title-section {
+    font-family: 'Playfair Display', serif;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-title {
+    font-size: clamp(1.9rem, 3.1vw, 2.5rem);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(0, 0, 0, 0.5);
+    max-width: 750px;
+}
+
+/* ============================================
+   SECCIÓN INFERIOR - SUBTÍTULO Y BOTONES
+============================================ */
+.hero-bottom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 0;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-subtitle-wrapper {
+    flex: 1;
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    color: #f8f8f8;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+    text-align: left;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   BOTONES DE ACCIÓN
+============================================ */
+.hero-buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Botón primario */
+.btn-primary-modern {
+    background: #FFFFFF;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.95rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-primary-modern:hover::before {
+    left: 100%;
+}
+
+.btn-primary-modern:hover {
+    background: #f0f0f0;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón secundario */
+.btn-secondary-modern {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    padding: 0.95rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    height: 50px;
+    font-size: 0.82rem;
+    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary-modern:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   CONTROL DE VIDEO (PLAY/PAUSE)
+============================================ */
+.video-control-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+/* ============================================
+   SCROLL INDICATOR
+============================================ */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.scroll-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.scroll-arrow {
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow i {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   ANIMACIONES
+============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================
+   SECCIÓN DE BIENVENIDA - MODERNIZADA Y PROFESIONAL
+===============================================*/
+
+/* VARIABLES MEJORADAS Y MODERNIZADAS */
+:root {
+    /* Verde institucional modernizado */
+    --institutional-green: #0d4f2b;
+    --institutional-green-dark: #0a3d21;
+    --institutional-green-light: #155432;
+
+    /* Paleta extendida profesional */
+    --accent-gold: #f4b942;
+    --primary-blue: #1E3A5F;
+    --slate-blue: #3A506B;
+    --white: #ffffff;
+    --warm-white: #FEFEFE;
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+
+    /* Sombras modernas */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    /* Transiciones suaves */
+    --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Bordes modernos */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-full: 50px;
+}
+
+.welcome-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFB 40%, #FFFFFF 70%, #F0F4F8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 25% 25%, rgba(30, 58, 95, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(13, 79, 43, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 50% 10%, rgba(244, 185, 66, 0.01) 0%, transparent 40%);
+    z-index: 1;
+}
+
+.welcome-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+}
+
+/* Header de Bienvenida - MODERNIZADO */
+.welcome-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.06), rgba(30, 58, 95, 0.02));
+    color: var(--primary-green);
+    padding: 1.3rem 2.8rem;
+    border: 2px solid rgba(30, 58, 95, 0.12);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 32px rgba(30, 58, 95, 0.08);
+    backdrop-filter: blur(12px);
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.welcome-badge i {
+    color: var(--accent-gold);
+    font-size: 1.3rem;
+}
+
+/* Título Principal - TIPOGRAFÍA PROFESIONAL MODERNA */
+.welcome-main-title {
+    font-family: 'times new roman', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(2rem, 4.7vw, 4rem);
+    font-weight: 700;
+    color: black;
+    margin-bottom: 2.5rem;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-main-title .highlight-text {
+    color: var(--institutional-green);
+    position: relative;
+    font-weight: 800;
+}
+
+/* Subtítulo Principal - MEJORADO */
+.welcome-main-subtitle {
+    font-size: 1.4rem;
+    color: black;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    line-height: 1.65;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    font-family: 'times new roman', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Welcome Intro - MODERNIZADA */
+.welcome-intro {
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.intro-subtitle {
+    font-family: 'times new roman', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    position: relative;
+    text-shadow: 0 2px 8px rgba(13, 79, 43, 0.12);
+}
+
+.intro-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--primary-blue) 50%, #f39c12 100%);
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.25);
+}
+
+.intro-description {
+    font-size: 1.15rem;
+    color: black;
+    line-height: 1.75;
+    font-weight: 400;
+    text-align: justify;
+    max-width: 100%;
+    letter-spacing: 0.005em;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Stats Mini - MODERNIZADAS */
+.welcome-stats-mini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.stat-mini-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, var(--white) 0%, var(--warm-white) 100%);
+    padding: 2rem 1.8rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--medium-gray);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-mini-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--institutional-green) 0%, var(--accent-gold) 50%, var(--primary-blue) 100%);
+    transform: scaleX(0);
+    transition: var(--transition-normal);
+}
+
+.stat-mini-item:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-mini-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(30, 58, 95, 0.15);
+}
+
+.stat-mini-icon {
+    width: 58px;
+    height: 58px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--slate-blue) 100%);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+}
+
+.stat-mini-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-mini-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--institutional-green);
+    line-height: 1;
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+    margin-bottom: 0.4rem;
+}
+
+.stat-mini-label {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Feature Points - MODERNIZADAS */
+.welcome-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-point {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1.8rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 251, 0.8) 100%);
+    border: 1px solid transparent;
+    transition: var(--transition-normal);
+    position: relative;
+    backdrop-filter: blur(8px);
+}
+
+.feature-point:hover {
+    background: linear-gradient(135deg, var(--white) 0%, var(--warm-white) 100%);
+    border-color: rgba(30, 58, 95, 0.12);
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-point-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.feature-point span {
+    font-weight: 500;
+    color: black;
+    font-size: 1.05rem;
+    letter-spacing: 0.005em;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Imagen Principal - MODERNIZADA */
+.welcome-image-container {
+    position: relative;
+}
+
+.main-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: var(--white);
+}
+
+.welcome-main-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.main-image-wrapper:hover .welcome-main-image {
+    transform: scale(1.03);
+}
+
+.image-overlay-content {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 3;
+}
+
+.overlay-badge {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 251, 0.9) 100%);
+    color: black;
+    padding: 1.2rem 1.8rem;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(30, 58, 95, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.overlay-badge i {
+    color: black;
+    font-size: 1.15rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+           GALERÍA DE INSTALACIONES - DISEÑO MODERNO
+        ============================================ */
+
+        .facilities-gallery {
+            margin-top: 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        .gallery-header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-family: 'Times New Roman', 'Inter', 'Segoe UI', sans-serif;
+            font-size: 3.0rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 8px rgba(13, 79, 43, 0.15);
+        }
+
+        .title-decorator {
+            width: 90px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--primary-blue) 50%, #f39c12 100%);
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(244, 185, 66, 0.3);
+        }
+
+        .gallery-subtitle {
+            color: var(--text-dark);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+            letter-spacing: 0.005em;
+        }
+
+        /* GRID RESPONSIVE */
+        .gallery-grid {
+            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            padding: 0 1rem;
+        }
+
+        /* CARDS - DISEÑO CUADRADO */
+        .gallery-item {
+            position: relative;
+            transition: var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .gallery-image-wrapper {
+            position: relative;
+            border-radius: 0;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            aspect-ratio: 1 / 1;
+            transition: var(--transition-normal);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        /* TÍTULO DEBAJO DE LA CARD */
+        .gallery-title-overlay {
+            text-align: center;
+            padding: 0;
+        }
+
+        .facility-title {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0;
+            letter-spacing: 0.01em;
+            line-height: 1.4;
+            transition: var(--transition-normal);
+        }
+
+        /* EFECTOS HOVER PROFESIONALES */
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .gallery-item:hover .gallery-image-wrapper {
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.08);
+        }
+
+       
+
+        /* ============================================
+           MODAL PROFESIONAL
+        ============================================ */
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 850px;
+            width: 90vw;
+            max-height: 85vh;
+            margin-top: 4rem;
+            background: var(--white);
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            animation: modalZoomIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalZoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-image-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #f0f0f0;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-info {
+            padding: 1.2rem 2rem;
+        }
+
+        .modal-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-description {
+            font-size: 0.92rem;
+            color: black;
+            line-height: 1.5;
+        }
+
+        /* BOTÓN CERRAR */
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+           
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-close:hover {
+            background: var(--white);
+            color: black;
+        }
+
+        .modal-close i {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        .modal-close:hover i {
+            color: black;
+        }
+
+        /* BOTONES DE NAVEGACIÓN */
+        .modal-nav {
+            position: absolute;
+            top: 160px;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-normal);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        
+        .modal-nav i {
+            font-size: 1.1rem;
+            color: black;
+        }
+
+        .modal-nav:hover i {
+            color: black;
+        }
+
+        .modal-prev {
+            left: 1.5rem;
+        }
+
+        .modal-next {
+            right: 1.5rem;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================
+    SECCIÓN QUIÉNES SOMOS - DISEÑO MODERNIZADO Y PROFESIONAL
+===============================================*/
+.about-us-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    padding: 3rem 0rem 0rem 0rem;
+    top: 0;
+}
+
+.about-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(13, 79, 43, 0.03) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(30, 58, 95, 0.02) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.about-us-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-main-title {
+    /* Tipografía moderna y elegante */
+    font-family: 'times new roman', 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(2.8rem, 4.5vw, 4rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 4rem;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    text-align: center;
+    position: relative;
+    /* Efecto de texto más sofisticado */
+    text-shadow: 0 2px 8px rgba(13, 79, 43, 0.15);
+    background: linear-gradient(135deg, var(--primary-green) 0%, #0d5f3b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-gold) 50%, #1E3A5F 100%);
+
+    box-shadow: 0 2px 8px rgba(244, 185, 66, 0.3);
+}
+
+.about-main-subtitle {
+    font-size: 1.25rem;
+    color: black;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.card-header {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 0.15rem 1rem;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Alinea el contenido a la izquierda */
+    border-radius: 12px 12px 0 0;
+}
+
+.card-header h3 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-left: 1.9rem;
+    /* Margen suave desde la izquierda */
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    line-height: 1.9;
+    letter-spacing: -0.005em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
+
+.card-body {
+    /* Fondo transparente sin márgenes ni bordes - MODIFICACIÓN PRINCIPAL */
+    background: transparent;
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: justify;
+    border-radius: 0 0 12px 12px;
+    margin: 0;
+    border: none;
+}
+
+.card-description {
+    /* Texto simétrico y profesional */
+    color: black;
+    line-height: 1.9;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-align: justify;
+    word-spacing: 0.05em;
+    background: transparent;
+    border: none;
+}
+
+/* Layout profesional: 2x2 grid - más compacto */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: start;
+}
+
+
+
+
+
+
+/* ===============================================
+   ELEMENTOS DECORATIVOS ACADÉMICOS - QUIÉNES SOMOS
+   =============================================== */
+
+/* Íconos flotantes académicos */
+.about-card .card-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    z-index: 3;
+    transition: all var(--transition-normal);
+}
+
+/* Ícono específico para cada card */
+.history-card .card-header::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/%3E%3Cpath d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/%3E%3C/svg%3E");
+}
+
+.mission-card .card-header::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 14s1.5 2 4 2 4-2 4-2'/%3E%3Cline x1='9' y1='9' x2='9.01' y2='9'/%3E%3Cline x1='15' y1='9' x2='15.01' y2='9'/%3E%3C/svg%3E");
+}
+
+.vision-card .card-header::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z'/%3E%3C/svg%3E");
+}
+
+.philosophy-card .card-header::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c3 3 9 3 12 0v-5'/%3E%3C/svg%3E");
+}
+
+
+
+/* Líneas decorativas en la sección principal */
+.about-us-section::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(13, 63, 39, 0.2) 50%, transparent 100%);
+    transform: rotate(15deg);
+    z-index: 1;
+}
+
+.about-us-section .container::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(244, 185, 66, 0.3) 50%, transparent 100%);
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+/* Efectos hover mejorados */
+.about-card:hover .card-header::before {
+    opacity: 0.6;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.about-card:hover .card-body::after {
+    opacity: 0.2;
+    transform: scale(1.2);
+}
+
+/* Decoración sutil del header principal */
+.about-header::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(30, 58, 95, 0.15) 50%, transparent 100%);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===============================================
+   SECCIÓN NIVELES EDUCATIVOS CON CARRUSEL
+   Diseño moderno sin cards - Experiencia fluida
+===============================================*/
+
+
+
+/* Sección Principal */
+.academic-levels-section {
+    padding: 1rem  2rem 4rem 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 25%, #ffffff 50%, #f1f5f9 75%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.academic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header de la Sección */
+.academic-levels-header {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.academic-levels-main-title {
+    font-family: 'Times New Roman', 'Inter', 'Segoe UI', serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    text-shadow: 0 2px 8px rgba(13, 79, 43, 0.15);
+    background: linear-gradient(135deg, var(--primary-green) 0%, #0d5f3b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.academic-levels-main-subtitle {
+    font-size: 1.2rem;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Grid 2x2 */
+.academic-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.academic-col {
+    display: flex;
+}
+
+/* Tarjetas de Nivel - Sin card style */
+.academic-level-card {
+    margin-bottom: 30px;
+    
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.academic-level-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ========== CARRUSEL ========== */
+
+/* Contenedor del Carrusel - Sin border radius */
+.academic-carousel-container {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background: transparent;
+    flex-shrink: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Slides del Carrusel */
+.academic-carousel-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* ✅ CORREGIDO */
+.academic-carousel-slide {
+    flex: 0 0 100%; /* CRÍTICO: Asegura que cada slide ocupe exactamente el 100% */
+    min-width: 100%;
+    width: 100%; /* Agregar esto también */
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+
+/* IMAGEN SIN TRANSICIÓN DE ZOOM */
+.academic-carousel-slide .academic-level-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.1) contrast(1.05) saturate(1.1);
+    transition: none;
+}
+
+.academic-level-card:hover .academic-carousel-slide .academic-level-image {
+    transform: none;
+    filter: brightness(1.1) contrast(1.05) saturate(1.1);
+}
+
+/* Botones de Navegación */
+.academic-carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+    opacity: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.academic-level-card:hover .academic-carousel-nav {
+    opacity: 1;
+}
+
+.academic-carousel-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.academic-carousel-prev {
+    left: 15px;
+}
+
+.academic-carousel-next {
+    right: 15px;
+}
+
+.academic-carousel-nav i {
+    font-size: 1.2rem;
+    color: black;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.academic-carousel-nav:hover i {
+    color: black;
+}
+
+/* Contador de Imágenes */
+.academic-carousel-counter {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: black;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+/* Controles (Dots) */
+.academic-carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.academic-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.academic-carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+.academic-carousel-dot.active {
+    background: rgba(170, 167, 167, 0.85);
+    border-radius: 5px;
+}
+
+
+
+/* ========== CONTENIDO DE LA TARJETA - MEJORADO ========== */
+
+.academic-card-content {
+    padding: 1.5rem 0 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.academic-level-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.academic-level-description {
+    color: black;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-weight: 400;
+    flex-grow: 1;
+}
+
+.academic-level-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-green);
+    align-self: flex-start;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(13, 79, 43, 0.2);
+    margin-top: 0.5rem;
+}
+
+.academic-level-link:hover {
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(13, 79, 43, 0.3);
+    text-decoration: none;
+    background: var(--primary-green);
+}
+
+.academic-level-link i {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.academic-level-link:hover i {
+    transform: translateX(5px);
+}
+
+
+
+/* ========== ANIMACIONES ========== */
+
+@keyframes academic-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mejoras de Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .academic-level-card,
+    .academic-carousel-slides,
+    .academic-carousel-nav,
+    .academic-level-link {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus States */
+.academic-level-card:focus,
+.academic-level-link:focus,
+.academic-carousel-nav:focus,
+.academic-carousel-dot:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Soporte para Backdrop Filter */
+@supports (backdrop-filter: blur(10px)) {
+    .academic-carousel-counter {
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Línea decorativa sutil después del título */
+.academic-level-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-green);
+    margin-top: 0.5rem;
+    
+    transition: var(--academic-transition-normal);
+}
+
+.academic-level-card:hover .academic-level-title::after {
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN MODULAR
+   Gimnasio Humanístico 2024
+   Organizado por secciones para fácil mantenimiento
+   (Sin sección de Niveles Educativos)
+============================================ */
+
+/* ============================================
+   TABLETS GRANDES Y LAPTOPS PEQUEÑAS (1024px - 1200px)
+============================================ */
+@media (max-width: 1200px) {
+    /* ========== VARIABLES GLOBALES ========== */
+    :root {
+        --section-padding: 5rem 0;
+        --container-padding: 0 1.25rem;
+    }
+
+    /* ========== CONTENEDORES GENERALES ========== */
+    .container,
+    .welcome-section .container,
+    .about-us-section .container {
+        padding: 0 1.5rem;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-title {
+        font-size: clamp(1.4rem, 2.8vw, 2rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.85rem, 1.4vw, 1rem);
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-main-title {
+        font-size: clamp(1.8rem, 4.2vw, 3.5rem);
+    }
+
+    .welcome-main-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.7rem;
+    }
+
+    .welcome-stats-mini {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .cards-grid {
+        gap: 2rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.7rem;
+        margin-left: 1.5rem;
+    }
+}
+
+/* ============================================
+   TABLETS (768px - 1024px)
+============================================ */
+@media (max-width: 1024px) {
+    /* ========== VARIABLES GLOBALES ========== */
+    :root {
+        --section-padding: 4rem 0;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-banner {
+        min-height: 85vh;
+    }
+
+    .hero-content {
+        margin-top: 60px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+        max-width: 650px;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+        max-width: 600px;
+    }
+
+    .hero-buttons-wrapper {
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        padding: 0.85rem 1.8rem;
+        font-size: 0.78rem;
+        height: 46px;
+    }
+
+    .scroll-indicator {
+        bottom: 30px;
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-section {
+        padding: 4rem 0;
+    }
+
+    .welcome-badge {
+        padding: 1.1rem 2.4rem;
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .welcome-main-title {
+        font-size: clamp(1.6rem, 3.8vw, 3rem);
+        margin-bottom: 2rem;
+    }
+
+    .welcome-main-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro-description {
+        font-size: 1.05rem;
+    }
+
+    .welcome-stats-mini {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .stat-mini-item {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .stat-mini-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.3rem;
+    }
+
+    .stat-mini-number {
+        font-size: 1.6rem;
+    }
+
+    .stat-mini-label {
+        font-size: 0.85rem;
+    }
+
+    .welcome-main-image {
+        height: 420px;
+    }
+
+    .overlay-badge {
+        padding: 1rem 1.5rem;
+        font-size: 0.85rem;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .facilities-gallery {
+        margin-top: 4rem;
+    }
+
+    .gallery-title {
+        font-size: 2.6rem;
+        gap: 1.5rem;
+    }
+
+    .title-decorator {
+        width: 70px;
+    }
+
+    .gallery-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .facility-title {
+        font-size: 1.1rem;
+    }
+
+    /* Modal de Galería */
+    .modal-content {
+        max-width: 750px;
+    }
+
+    .modal-image-container {
+        height: 280px;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .about-us-section {
+        padding: 4rem 0;
+    }
+
+    .about-main-title {
+        font-size: clamp(2.4rem, 4vw, 3.5rem);
+        margin-bottom: 3.5rem;
+    }
+
+    .about-main-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .cards-grid {
+        gap: 2rem;
+    }
+
+    .card-header {
+        padding: 1rem 1rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.6rem;
+        margin-left: 1.2rem;
+    }
+
+    .card-body {
+        padding: 1.8rem 0;
+    }
+
+    .card-description {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+/* ============================================
+   TABLETS PEQUEÑAS Y MÓVILES GRANDES (640px - 768px)
+============================================ */
+@media (max-width: 768px) {
+    /* ========== VARIABLES GLOBALES ========== */
+    :root {
+        --section-padding: 3.5rem 0;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-banner {
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        margin-top: 50px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+        max-width: 100%;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+        max-width: 100%;
+    }
+
+    .hero-buttons-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        width: 100%;
+        max-width: 320px;
+        padding: 0.8rem 1.5rem;
+        height: 44px;
+    }
+
+    .video-control-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .scroll-indicator {
+        bottom: 30px;
+    }
+
+    .scroll-text {
+        font-size: 0.75rem;
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-section {
+        padding: 3.5rem 0;
+    }
+
+    .welcome-badge {
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+        gap: 0.6rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .welcome-badge i {
+        font-size: 1.1rem;
+    }
+
+    .welcome-main-title {
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+        margin-bottom: 1.8rem;
+    }
+
+    .welcome-main-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 3rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .intro-subtitle::after {
+        width: 50px;
+        height: 3px;
+    }
+
+    .intro-description {
+        font-size: 1rem;
+    }
+
+    .welcome-stats-mini {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+        margin-bottom: 3rem;
+    }
+
+    .stat-mini-item {
+        padding: 1.6rem 1.3rem;
+    }
+
+    .feature-point {
+        padding: 1.3rem 1.5rem;
+    }
+
+    .feature-point span {
+        font-size: 1rem;
+    }
+
+    .welcome-main-image {
+        height: 360px;
+    }
+
+    .overlay-badge {
+        padding: 1rem 1.5rem;
+        font-size: 0.85rem;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .facilities-gallery {
+        margin-top: 3rem;
+    }
+
+    .gallery-header {
+        margin-bottom: 3rem;
+    }
+
+    .gallery-title {
+        font-size: 2.2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title-decorator {
+        width: 60px;
+    }
+
+    .gallery-subtitle {
+        font-size: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .facility-title {
+        font-size: 1rem;
+    }
+
+    /* Modal de Galería */
+    .modal-content {
+        max-width: 90vw;
+        width: 90vw;
+    }
+
+    .modal-image-container {
+        height: 240px;
+    }
+
+    .modal-info {
+        padding: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.2rem;
+    }
+
+    .modal-description {
+        font-size: 0.88rem;
+    }
+
+    .modal-close {
+        width: 36px;
+        height: 36px;
+        top: 0.8rem;
+        right: 0.8rem;
+    }
+
+    .modal-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-prev {
+        left: 1rem;
+    }
+
+    .modal-next {
+        right: 1rem;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .about-us-section {
+        padding: 3.5rem 0;
+    }
+
+    .about-main-title {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        margin-bottom: 3rem;
+    }
+
+    .about-main-title::after {
+        width: 80px;
+        bottom: -12px;
+    }
+
+    .about-main-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-header {
+        padding: 0.9rem 1rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .card-body {
+        padding: 1.6rem 0;
+    }
+
+    .card-description {
+        font-size: 0.93rem;
+        line-height: 1.75;
+    }
+}
+
+/* ============================================
+   MÓVILES (480px - 640px)
+============================================ */
+@media (max-width: 640px) {
+    /* ========== VARIABLES GLOBALES ========== */
+    :root {
+        --section-padding: 3rem 0;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-banner {
+        min-height: 75vh;
+    }
+
+    .hero-content {
+        margin-top: 40px;
+    }
+
+    .hero-title-section {
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.7rem, 1.1vw, 0.85rem);
+    }
+
+    .hero-bottom-section {
+        gap: 1.2rem;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        padding: 0.75rem 1.3rem;
+        font-size: 0.75rem;
+        height: 42px;
+    }
+
+    .video-control-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.9rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-section {
+        padding: 3rem 0;
+    }
+
+    .welcome-section .container {
+        padding: 0 1.5rem;
+    }
+
+    .welcome-badge {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .welcome-badge i {
+        font-size: 1rem;
+    }
+
+    .welcome-main-title {
+        font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .welcome-main-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.35rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .intro-subtitle::after {
+        width: 45px;
+        bottom: -8px;
+    }
+
+    .intro-description {
+        font-size: 0.95rem;
+    }
+
+    .welcome-stats-mini {
+        gap: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .stat-mini-item {
+        padding: 1.5rem 1.2rem;
+        gap: 1.2rem;
+    }
+
+    .stat-mini-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .stat-mini-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-mini-label {
+        font-size: 0.8rem;
+    }
+
+    .feature-point {
+        padding: 1.2rem 1.3rem;
+        gap: 1.2rem;
+    }
+
+    .feature-point-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 1.1rem;
+    }
+
+    .feature-point span {
+        font-size: 0.95rem;
+    }
+
+    .welcome-main-image {
+        height: 320px;
+    }
+
+    .overlay-badge {
+        padding: 0.9rem 1.3rem;
+        font-size: 0.8rem;
+        gap: 0.6rem;
+        top: 1.2rem;
+        right: 1.2rem;
+    }
+
+    .overlay-badge i {
+        font-size: 1rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .gallery-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .gallery-title {
+        font-size: 1.9rem;
+        flex-direction: row;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .title-decorator {
+        width: 40px;
+        height: 3px;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .gallery-grid {
+        gap: 1.3rem;
+    }
+
+    .facility-title {
+        font-size: 0.95rem;
+    }
+
+    /* Modal de Galería */
+    .modal-image-container {
+        height: 220px;
+    }
+
+    .modal-info {
+        padding: 1.3rem;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-description {
+        font-size: 0.85rem;
+    }
+
+    .modal-close {
+        width: 34px;
+        height: 34px;
+    }
+
+    .modal-close i {
+        font-size: 1.1rem;
+    }
+
+    .modal-nav {
+        width: 38px;
+        height: 38px;
+    }
+
+    .modal-nav i {
+        font-size: 1rem;
+    }
+
+    .modal-prev {
+        left: 0.8rem;
+    }
+
+    .modal-next {
+        right: 0.8rem;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .about-us-section {
+        padding: 3rem 0;
+    }
+
+    .about-main-title {
+        font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+        margin-bottom: 2.5rem;
+    }
+
+    .about-main-title::after {
+        width: 70px;
+        height: 3px;
+        bottom: -10px;
+    }
+
+    .about-main-subtitle {
+        font-size: 1rem;
+    }
+
+    .cards-grid {
+        gap: 1.8rem;
+    }
+
+    .card-header {
+        padding: 0.8rem 0.9rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.4rem;
+        margin-left: 0.9rem;
+    }
+
+    .card-body {
+        padding: 1rem 0;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   MÓVILES PEQUEÑOS (< 480px)
+============================================ */
+@media (max-width: 480px) {
+    /* ========== VARIABLES GLOBALES ========== */
+    :root {
+        --section-padding: 2.5rem 0;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-banner {
+        min-height: 70vh;
+    }
+
+    .hero-content {
+        margin-top: 35px;
+    }
+
+    .hero-title {
+        font-size: clamp(1rem, 1.8vw, 1.3rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.65rem, 1vw, 0.8rem);
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.72rem;
+        height: 40px;
+        gap: 0.5rem;
+    }
+
+    .video-control-btn {
+        width: 36px;
+        height: 36px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 0.85rem;
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-section {
+        padding: 2.5rem 0;
+    }
+
+    .welcome-section .container {
+        padding: 0 1.2rem;
+    }
+
+    .welcome-badge {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.7rem;
+        gap: 0.5rem;
+    }
+
+    .welcome-main-title {
+        font-size: clamp(1.3rem, 3vw, 2rem);
+        margin-bottom: 1.3rem;
+    }
+
+    .welcome-main-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .intro-subtitle::after {
+        width: 40px;
+        height: 2.5px;
+    }
+
+    .intro-description {
+        font-size: 0.9rem;
+    }
+
+    .welcome-stats-mini {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat-mini-item {
+        padding: 1.3rem 1rem;
+    }
+
+    .stat-mini-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+    }
+
+    .stat-mini-number {
+        font-size: 1.4rem;
+    }
+
+    .stat-mini-label {
+        font-size: 0.75rem;
+    }
+
+    .feature-point {
+        padding: 1rem 1.1rem;
+    }
+
+    .feature-point span {
+        font-size: 0.9rem;
+    }
+
+    .welcome-main-image {
+        height: 280px;
+    }
+
+    .overlay-badge {
+        padding: 0.8rem 1.1rem;
+        font-size: 0.75rem;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .gallery-title {
+        font-size: 1.7rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .facility-title {
+        font-size: 1.05rem;
+    }
+
+    /* Modal de Galería */
+    .modal-content {
+        margin-top: 3rem;
+    }
+
+    .modal-image-container {
+        height: 200px;
+    }
+
+    .modal-info {
+        padding: 1.2rem;
+    }
+
+    .modal-title {
+        font-size: 1.05rem;
+    }
+
+    .modal-description {
+        font-size: 0.82rem;
+    }
+
+    .modal-close {
+        width: 32px;
+        height: 32px;
+    }
+
+    .modal-close i {
+        font-size: 1rem;
+    }
+
+    .modal-nav {
+        width: 36px;
+        height: 36px;
+    }
+
+    .modal-nav i {
+        font-size: 0.95rem;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .about-us-section {
+        padding: 2.5rem 0;
+    }
+
+    .about-us-section .container {
+        padding: 0 1.2rem;
+    }
+
+    .about-main-title {
+        font-size: clamp(1.6rem, 3vw, 2.3rem);
+        margin-bottom: 2rem;
+    }
+
+    .about-main-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .cards-grid {
+        gap: 1.5rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.3rem;
+        margin-left: 0.8rem;
+    }
+
+    .card-body {
+        padding: 1rem 0;
+    }
+
+    .card-description {
+        font-size: 0.88rem;
+    }
+}
+
+/* ============================================
+   MÓVILES MUY PEQUEÑOS (< 375px)
+============================================ */
+@media (max-width: 375px) {
+    /* ========== HERO SECTION ========== */
+    .hero-title {
+        font-size: 1.1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        padding: 0.65rem 1rem;
+        font-size: 0.7rem;
+        height: 38px;
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-badge {
+        padding: 0.75rem 1.3rem;
+        font-size: 0.65rem;
+    }
+
+    .welcome-main-title {
+        font-size: 1.4rem;
+    }
+
+    .welcome-main-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .intro-description {
+        font-size: 0.85rem;
+    }
+
+    .stat-mini-item {
+        padding: 1.2rem 0.9rem;
+    }
+
+    .stat-mini-number {
+        font-size: 1.3rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .facility-title {
+        font-size: 1rem;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .about-main-title {
+        font-size: 1.7rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   PANTALLAS EXTREMADAMENTE PEQUEÑAS (< 280px)
+============================================ */
+@media (max-width: 280px) {
+    /* ========== HERO SECTION ========== */
+    .hero-title {
+        font-size: 0.95rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.65rem;
+        height: 36px;
+    }
+
+    /* ========== SECCIÓN BIENVENIDA ========== */
+    .welcome-badge {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.6rem;
+    }
+
+    .welcome-main-title {
+        font-size: 1.3rem;
+    }
+
+    .welcome-main-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .intro-description {
+        font-size: 0.8rem;
+    }
+
+    .stat-mini-item {
+        padding: 1rem 0.8rem;
+    }
+
+    .stat-mini-number {
+        font-size: 1.2rem;
+    }
+
+    .stat-mini-label {
+        font-size: 0.7rem;
+    }
+
+    /* ========== GALERÍA DE INSTALACIONES ========== */
+    .gallery-title {
+        font-size: 1.4rem;
+    }
+
+    .facility-title {
+        font-size: 0.95rem;
+    }
+
+    .modal-nav {
+        width: 32px;
+        height: 32px;
+    }
+
+    .modal-nav i {
+        font-size: 0.85rem;
+    }
+
+    .modal-prev {
+        left: 0.5rem;
+    }
+
+    .modal-next {
+        right: 0.5rem;
+    }
+
+    .modal-close {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal-close i {
+        font-size: 0.95rem;
+    }
+
+    /* ========== SECCIÓN QUIÉNES SOMOS ========== */
+    .about-main-title {
+        font-size: 1.6rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   CORRECCIONES FINALES Y AJUSTES ESPECÍFICOS
+============================================ */
+
+/* Modal - Controles centrados en LA IMAGEN (todas las pantallas móviles) */
+@media (max-width: 768px) {
+    .modal-image-container {
+        position: relative;
+    }
+
+    .modal-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .modal-prev {
+        left: 0.8rem;
+    }
+
+    .modal-next {
+        right: 0.8rem;
+    }
+}
+
+/* Modal - Ajuste adicional para pantallas muy pequeñas */
+@media (max-width: 375px) {
+    .modal-prev {
+        left: 0.6rem;
+    }
+
+    .modal-next {
+        right: 0.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets Grandes y Laptops pequeños (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .academic-container {
+        padding: 0 1.5rem;
+    }
+
+    .academic-row {
+        gap: 2.5rem;
+    }
+
+    .academic-carousel-container {
+        height: 260px;
+    }
+
+    .academic-level-title {
+        font-size: 1.4rem;
+    }
+
+    .academic-level-description {
+        font-size: 0.92rem;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .academic-levels-section {
+        padding: 3rem 1rem;
+        margin-bottom: 40px;
+    }
+
+    .academic-container {
+        padding: 0 1rem;
+    }
+
+    .academic-levels-header {
+        margin-bottom: 3rem;
+    }
+
+    .academic-levels-main-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .academic-levels-main-subtitle {
+        font-size: 1.05rem;
+        padding: 0 1rem;
+    }
+
+    /* Grid cambia a 1 columna */
+    .academic-row {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .academic-carousel-container {
+        height: 240px;
+    }
+
+    .academic-level-title {
+        font-size: 1.35rem;
+    }
+
+    .academic-level-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .academic-level-link {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.3rem;
+    }
+
+    /* Botones de navegación más pequeños */
+    .academic-carousel-nav {
+        width: 36px;
+        height: 36px;
+    }
+
+    .academic-carousel-nav i {
+        font-size: 1.1rem;
+    }
+
+    .academic-carousel-prev {
+        left: 12px;
+    }
+
+    .academic-carousel-next {
+        right: 12px;
+    }
+
+    .academic-carousel-counter {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+
+    .academic-carousel-controls {
+        bottom: 15px;
+        gap: 8px;
+    }
+
+    .academic-carousel-dot {
+        width: 9px;
+        height: 9px;
+    }
+}
+
+/* Móviles grandes (max-width: 576px) */
+@media (max-width: 576px) {
+    .academic-levels-section {
+        padding: 2.5rem 0.75rem;
+        margin-bottom: 30px;
+    }
+
+    .academic-container {
+        padding: 0 0.75rem;
+    }
+
+    .academic-levels-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .academic-levels-main-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        margin-bottom: 1.2rem;
+        letter-spacing: -0.02em;
+    }
+
+    .academic-levels-main-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        padding: 0 0.5rem;
+    }
+
+    .academic-row {
+        gap: 2.5rem;
+    }
+
+    .academic-carousel-container {
+        height: 200px;
+    }
+
+    .academic-card-content {
+        padding: 1.2rem 0 0;
+    }
+
+    .academic-level-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .academic-level-title::after {
+        width: 50px;
+        height: 2.5px;
+        margin-top: 0.4rem;
+    }
+
+    .academic-level-description {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin-bottom: 0.9rem;
+    }
+
+    .academic-level-link {
+        font-size: 0.8rem;
+        padding: 0.65rem 1.2rem;
+        gap: 0.8rem;
+    }
+
+    /* Botones de navegación aún más pequeños */
+    .academic-carousel-nav {
+        width: 32px;
+        height: 32px;
+    }
+
+    .academic-carousel-nav i {
+        font-size: 1rem;
+    }
+
+    .academic-carousel-prev {
+        left: 10px;
+    }
+
+    .academic-carousel-next {
+        right: 10px;
+    }
+
+    .academic-carousel-counter {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .academic-carousel-controls {
+        bottom: 12px;
+        gap: 7px;
+    }
+
+    .academic-carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Móviles medianos (max-width: 425px) */
+@media (max-width: 425px) {
+    .academic-levels-section {
+        padding: 2rem 0.5rem;
+    }
+
+    .academic-container {
+        padding: 0 0.5rem;
+    }
+
+    .academic-levels-main-title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
+    .academic-levels-main-subtitle {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+
+    .academic-row {
+        gap: 2rem;
+    }
+
+    .academic-carousel-container {
+        height: 180px;
+    }
+
+    .academic-card-content {
+        padding: 1rem 0 0;
+    }
+
+    .academic-level-title {
+        font-size: 1.15rem;
+    }
+
+    .academic-level-description {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+
+    .academic-level-link {
+        font-size: 0.75rem;
+        padding: 0.6rem 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .academic-carousel-nav {
+        width: 30px;
+        height: 30px;
+    }
+
+    .academic-carousel-nav i {
+        font-size: 0.95rem;
+    }
+
+    .academic-carousel-prev {
+        left: 8px;
+    }
+
+    .academic-carousel-next {
+        right: 8px;
+    }
+}
+
+/* Móviles pequeños (max-width: 375px) */
+@media (max-width: 375px) {
+    .academic-levels-section {
+        padding: 1.5rem 0.4rem;
+    }
+
+    .academic-levels-header {
+        margin-bottom: 2rem;
+    }
+
+    .academic-levels-main-title {
+        font-size: clamp(1.5rem, 9vw, 2rem);
+        margin-bottom: 1rem;
+    }
+
+    .academic-levels-main-subtitle {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .academic-row {
+        gap: 1.8rem;
+    }
+
+    .academic-carousel-container {
+        height: 160px;
+    }
+
+    .academic-card-content {
+        padding: 0.9rem 0 0;
+    }
+
+    .academic-level-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .academic-level-title::after {
+        width: 45px;
+        height: 2px;
+    }
+
+    .academic-level-description {
+        font-size: 0.82rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .academic-level-link {
+        font-size: 0.72rem;
+        padding: 0.55rem 0.9rem;
+    }
+
+    .academic-carousel-counter {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .academic-carousel-controls {
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .academic-carousel-dot {
+        width: 7px;
+        height: 7px;
+    }
+}
+
+/* Móviles muy pequeños (max-width: 320px) */
+@media (max-width: 320px) {
+    .academic-levels-section {
+        padding: 1.5rem 0.3rem;
+    }
+
+    .academic-container {
+        padding: 0 0.3rem;
+    }
+
+    .academic-levels-main-title {
+        font-size: clamp(1.4rem, 10vw, 1.8rem);
+    }
+
+    .academic-levels-main-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .academic-row {
+        gap: 1.5rem;
+    }
+
+    .academic-carousel-container {
+        height: 150px;
+    }
+
+    .academic-card-content {
+        padding: 0.8rem 0 0;
+    }
+
+    .academic-level-title {
+        font-size: 1.05rem;
+    }
+
+    .academic-level-description {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .academic-level-link {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .academic-carousel-nav {
+        width: 28px;
+        height: 28px;
+    }
+
+    .academic-carousel-nav i {
+        font-size: 0.9rem;
+    }
+
+    .academic-carousel-prev {
+        left: 6px;
+    }
+
+    .academic-carousel-next {
+        right: 6px;
+    }
+}
+
+/* Pantallas extremadamente pequeñas (max-width: 250px) */
+@media (max-width: 250px) {
+    .academic-levels-section {
+        padding: 1rem 0.2rem;
+    }
+
+    .academic-container {
+        padding: 0 0.2rem;
+    }
+
+    .academic-levels-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .academic-levels-main-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .academic-levels-main-subtitle {
+        font-size: 0.75rem;
+        line-height: 1.5;
+    }
+
+    .academic-row {
+        gap: 1.2rem;
+    }
+
+    .academic-carousel-container {
+        height: 130px;
+    }
+
+    .academic-card-content {
+        padding: 0.7rem 0 0;
+    }
+
+    .academic-level-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .academic-level-title::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    .academic-level-description {
+        font-size: 0.75rem;
+        line-height: 1.45;
+        margin-bottom: 0.7rem;
+    }
+
+    .academic-level-link {
+        font-size: 0.65rem;
+        padding: 0.45rem 0.7rem;
+        letter-spacing: 0.05em;
+    }
+
+    .academic-carousel-nav {
+        width: 26px;
+        height: 26px;
+    }
+
+    .academic-carousel-nav i {
+        font-size: 0.85rem;
+    }
+
+    .academic-carousel-prev {
+        left: 5px;
+    }
+
+    .academic-carousel-next {
+        right: 5px;
+    }
+
+    .academic-carousel-counter {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .academic-carousel-controls {
+        bottom: 8px;
+        gap: 5px;
+    }
+
+    .academic-carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+/* Ajustes para pantallas táctiles */
+@media (hover: none) and (pointer: coarse) {
+    .academic-carousel-nav {
+        opacity: 1;
+    }
+    
+    .academic-level-link:active {
+        transform: scale(0.98);
+    }
+}

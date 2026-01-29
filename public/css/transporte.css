@@ -1,0 +1,269 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    /* Azul oscuro - elegancia */
+    --dark-blue: #264653;
+    /* Azul profundo (similar al que mostraste) */
+    --deep-blue: #003366;
+    /* Azul intermedio - contraste suave */
+    --soft-blue: #07346e;
+    /* Azul grisáceo - texto y detalles */
+    --slate-blue: #3A506B;
+    /* Complemento claro (fondos suaves) */
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+
+
+
+/* ============================================
+           HERO IMAGE CON DEGRADADO SUPERIOR
+============================================ */
+.transport-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.transport-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Degradado blanco desde arriba - Estilo Colombo */
+.transport-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* ============================================
+           SECCIÓN DE DESCRIPCIÓN - ESTILO MINIMALISTA
+        ============================================ */
+.transport-description {
+    background-color: #ffffff;
+    padding: 3rem 0 2rem;
+}
+
+.description-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.description-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 3.5vw, 2.5rem);
+    font-weight: 600;
+    color: var(--primary-green);
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+    line-height: 1.3;
+}
+
+
+.description-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    line-height: 1.9;
+    color: black;
+    text-align: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.description-content p {
+    margin-bottom: 1.5rem;  
+}
+
+
+.description-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+.description-content strong {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE GLOBAL - Gimnasio Humanístico 2024
+   Adaptación profesional para móviles y tablets
+============================================================ */
+
+/* -------- TABLETS (hasta 1024px) -------- */
+@media (max-width: 1024px) {
+
+    .transport-hero {
+        height: 5vh;
+    }
+
+    .description-wrapper {
+        padding: 0 1.5rem;
+    }
+
+    .description-title {
+        font-size: clamp(2.4rem, 3vw, 2rem);
+    }
+
+    .description-content {
+        font-size: clamp(1rem, 1.4vw, 1.1rem);
+        line-height: 1.8;
+    }
+}
+
+
+/* -------- MÓVILES GRANDES (hasta 768px) -------- */
+@media (max-width: 768px) {
+
+    .transport-hero {
+        height: 45vh;
+        min-height: 280px;
+    }
+
+    .transport-hero-image {
+        object-position: center center;
+    }
+
+    .description-wrapper {
+        padding: 0 1rem;
+    }
+
+    .description-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.8rem;
+    }
+
+    .description-content {
+        font-size: 1rem;
+        text-align: left; /* Se adapta mejor en vertical */
+        line-height: 1.7;
+    }
+
+    .description-content p {
+        margin-bottom: 1.2rem;
+    }
+}
+
+
+
+/* -------- MÓVILES PEQUEÑOS (hasta 480px) -------- */
+@media (max-width: 480px) {
+
+    .transport-hero {
+        height: 38vh;
+        min-height: 220px;
+    }
+
+    .description-wrapper {
+        padding: 0 0.8rem;
+    }
+
+    .description-title {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .description-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .description-content p {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+/* -------- MICRO PANTALLAS (menos de 360px) -------- */
+@media (max-width: 360px) {
+
+    .transport-hero {
+        height: 32vh;
+    }
+
+    .description-title {
+        font-size: 1.5rem;
+    }
+
+    .description-content {
+        font-size: 0.9rem;
+    }
+}

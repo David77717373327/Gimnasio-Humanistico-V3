@@ -1,0 +1,493 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    --dark-blue: #264653;
+    --deep-blue: #003366;
+    --soft-blue: #07346e;
+    --slate-blue: #3A506B;
+    --light-blue: #E0ECF7;
+
+    /* Nuevos colores para modernizar */
+    --soft-blue: #EBF8FF;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.1s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   SECCIÓN GRUPO HUMANÍSTICO S.A.S - DISEÑO ORIGINAL DESKTOP
+============================================ */
+.grupo-humanistico-section {
+    padding: 2rem 0 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.grupo-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.grupo-title-highlight {
+    color: var(--primary-green);
+    position: relative;
+    display: inline-block;
+}
+
+/* Contenedor del logo */
+.grupo-logo-container {
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    padding: 0 1rem;
+    animation: fadeInScale 1s ease-out 0.3s both;
+}
+
+.grupo-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    height: 300px;
+    transition: transform var(--transition-normal);
+    object-fit: contain;
+}
+
+.grupo-logo:hover {
+    transform: scale(1.02);
+}
+
+/* Descripción del grupo */
+.grupo-description {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.grupo-description p {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.8;
+    color: black;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.grupo-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   ANIMACIONES
+============================================ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 120px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN PERFECCIONADO
+============================================ */
+
+/* Tablets grandes y laptops pequeñas (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .grupo-humanistico-section {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .grupo-container {
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 0 2rem;
+    }
+
+    .grupo-logo-container {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+    }
+
+    .grupo-logo {
+        height: 260px;
+    }
+
+    .grupo-description {
+        max-width: 100%;
+        padding: 0 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 1.1rem;
+        line-height: 1.75;
+        margin-bottom: 1.4rem;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .grupo-humanistico-section {
+        padding: 4rem 0 4.5rem;
+    }
+
+    .grupo-container {
+        margin: 40px auto;
+        padding: 0 1.5rem;
+    }
+
+    .grupo-title {
+        margin-bottom: 2.5rem;
+    }
+
+    .title-decoration {
+        width: 80px;
+        margin: 1rem auto 2rem;
+    }
+
+    .grupo-logo-container {
+        max-width: 500px;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .grupo-logo {
+        height: 220px;
+    }
+
+    .grupo-description {
+        padding: 0 1rem;
+        text-align: left;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.3rem;
+    }
+
+    .description-separator {
+        margin: 1.5rem auto;
+    }
+}
+
+/* Móviles grandes (max-width: 640px) */
+@media (max-width: 640px) {
+    .grupo-humanistico-section {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .grupo-container {
+        margin: 30px auto;
+        padding: 0 1.25rem;
+    }
+
+    .grupo-logo-container {
+        max-width: 420px;
+        margin-bottom: 2.25rem;
+        padding: 0 0.75rem;
+    }
+
+    .grupo-logo {
+        height: 190px;
+    }
+
+    .grupo-description {
+        padding: 0 0.5rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 1.2rem;
+        text-align: left;
+    }
+}
+
+/* Móviles estándar (max-width: 480px) */
+@media (max-width: 480px) {
+    .grupo-humanistico-section {
+        padding: 3rem 0 3.5rem;
+    }
+
+    .grupo-container {
+        margin: 25px auto;
+        padding: 0 1rem;
+    }
+
+    .grupo-title {
+        margin-bottom: 2rem;
+    }
+
+    .grupo-logo-container {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    .grupo-logo {
+        height: 160px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .grupo-description {
+        padding: 0;
+         text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.1rem;
+        text-align: left;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* Móviles pequeños (max-width: 375px) */
+@media (max-width: 375px) {
+    .grupo-humanistico-section {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .grupo-container {
+        margin: 20px auto;
+        padding: 0 0.875rem;
+    }
+
+    .grupo-logo-container {
+        margin-bottom: 1.75rem;
+        padding: 0 0.25rem;
+    }
+
+    .grupo-logo {
+        height: 140px;
+        max-width: 95%;
+    }
+
+    .grupo-description {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .grupo-description p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 1rem;
+         text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* Móviles muy pequeños (max-width: 320px) */
+@media (max-width: 320px) {
+    .grupo-humanistico-section {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .grupo-container {
+        margin: 15px auto;
+        padding: 0 0.75rem;
+    }
+
+    .grupo-logo-container {
+        margin-bottom: 1.5rem;
+        padding: 0;
+    }
+
+    .grupo-logo {
+        height: 120px;
+        max-width: 100%;
+    }
+
+    .grupo-description p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.9rem;
+         text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* Orientación landscape en dispositivos móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    .grupo-humanistico-section {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .grupo-container {
+        margin: 20px auto;
+    }
+
+    .grupo-logo-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .grupo-logo {
+        height: 120px;
+    }
+
+    .grupo-description p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Tablets en landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .grupo-container {
+        max-width: 90%;
+    }
+
+    .grupo-logo {
+        height: 200px;
+    }
+
+    .grupo-description {
+        max-width: 95%;
+    }
+}
+
+/* Accesibilidad - Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .grupo-logo-container,
+    .grupo-description {
+        animation: none;
+    }
+
+    .grupo-logo {
+        transition: none;
+    }
+
+    .grupo-logo:hover {
+        transform: none;
+    }
+}
+
+/* Mejora de contraste */
+@media (prefers-contrast: high) {
+    .grupo-description p {
+        color: #000000;
+        text-shadow: none;
+    }
+
+    .grupo-title-highlight {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+}

@@ -1,0 +1,659 @@
+/* ============================================
+   VARIABLES CSS MODERNAS - Gimnasio Humanístico 2024
+============================================ */
+:root {
+    /* Paleta de colores modernizada y balanceada */
+    --primary-green: #0d3f27;
+    --primary-green-bottom: #065e35;
+    --secondary-green: #7ddfac;
+    --light-green: #4CAF50;
+    --accent-gold: #F4B942;
+    --dark-gold: #E6A835;
+    --soft-gold: #FDF6E3;
+    --dark-gold-fondo: #e7ba49;
+
+    /* Colores neutros modernos */
+    --white: #FFFFFF;
+    --light-gray: #F8FAFB;
+    --medium-gray: #E5E7EB;
+    --dark-gray: #374151;
+    --text-dark: #1F2937;
+    --text-darkk: #333333;
+    --text-light: #6B7280;
+    --text-muted: #9CA3AF;
+
+    /* Azul principal - confianza */
+    --primary-blue: #1E3A5F;
+    --dark-blue: #264653;
+    --deep-blue: #003366;
+    --soft-blue: #07346e;
+    --slate-blue: #3A506B;
+    --light-blue: #E0ECF7;
+    --accent-blue: #3B82F6;
+    --success-green: #10B981;
+    --warm-white: #FEFEFE;
+
+    /* Sombras modernas y suaves */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--accent-gold) 0%, var(--dark-gold) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(27, 94, 63, 0.9) 0%, rgba(27, 94, 63, 0.7) 100%);
+
+    /* Espaciado moderno */
+    --section-padding: 6rem 0;
+    --container-padding: 0 1.5rem;
+
+    /* Bordes redondeados */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+    --border-radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 0.15s ease-out;
+    --transition-normal: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+}
+
+
+
+/* ============================================
+   RESET Y BASE
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: var(--warm-white);
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   COMPONENTE FILOSÓFICO DE IDENTIDAD INSTITUCIONAL
+============================================ */
+.componente-filosofico-section {
+    margin-top: 30px;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #f8fafb 0%, #ffffff 50%, #f8fafb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.componente-filosofico-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(13, 63, 39, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 58, 95, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+
+
+
+/* ============================================
+   HEADER INSTITUCIONAL
+============================================ */
+.institutional-header {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* ============================================
+   CONTENIDO PRINCIPAL
+============================================ */
+.filosofia-content {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content-card {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: all var(--transition-normal);
+}
+
+.card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 0;
+}
+
+/* Declaración de Apertura */
+.opening-statement {
+    font-size: clamp(1.05rem, 2vw, 1.4rem);
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    padding: 35px;
+    background: linear-gradient(135deg, var(--light-blue) 0%, rgba(235, 248, 255, 0.3) 100%);
+    border-radius: var(--border-radius-lg);
+    
+    box-shadow: var(--shadow-sm);
+}
+
+.opening-statement strong {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+/* ============================================
+   BLOQUES DE FILOSOFÍA
+============================================ */
+.philosophy-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin-top: 0;
+}
+
+.philosophy-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 35px;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all var(--transition-normal);
+}
+
+
+/* ============================================
+   ICONOS
+============================================ */
+.block-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--primary-green);
+    color: var(--white);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+    transition: all var(--transition-normal);
+}
+
+.block-icon i {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* ============================================
+   CONTENIDO DE LOS BLOQUES
+============================================ */
+.block-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.block-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.block-content h4::after {
+    display: none;
+}
+
+.block-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+    color: black;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - BREAKPOINTS PROGRESIVOS
+============================================ */
+
+/* Pantallas Extra Grandes (1400px - 1200px) */
+@media (max-width: 1400px) {
+    .filosofia-content {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    
+    .content-card {
+        padding: 50px;
+    }
+    
+    .philosophy-blocks {
+        gap: 28px;
+    }
+}
+
+/* Laptops y Tablets Grandes (1200px - 992px) */
+@media (max-width: 1200px) {
+    .componente-filosofico-section {
+        margin-top: 80px;
+        padding: 3.5rem 1.5rem;
+    }
+    
+    .filosofia-content {
+        max-width: 960px;
+        padding: 0 1.5rem;
+    }
+    
+    .content-card {
+        padding: 45px;
+    }
+    
+    .opening-statement {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .philosophy-blocks {
+        gap: 25px;
+    }
+    
+    .philosophy-block {
+        padding: 30px;
+        gap: 20px;
+    }
+}
+
+/* Tablets Landscape (992px - 768px) */
+@media (max-width: 992px) {
+    .componente-filosofico-section {
+        margin-top: 70px;
+        padding: 3rem 1.2rem;
+    }
+    
+    .content-card {
+        padding: 40px;
+    }
+    
+    .opening-statement {
+        padding: 28px;
+        margin-bottom: 35px;
+    }
+    
+    .philosophy-blocks {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .philosophy-block {
+        padding: 28px;
+        gap: 20px;
+    }
+    
+    .block-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablets Portrait (768px - 576px) */
+@media (max-width: 768px) {
+    .componente-filosofico-section {
+        margin-top: 60px;
+        padding: 2.5rem 1rem;
+    }
+    
+    .filosofia-content {
+        padding: 0 0.5rem;
+    }
+    
+    .content-card {
+        padding: 30px 20px;
+    }
+    
+    .institutional-header {
+        margin-bottom: 30px;
+    }
+    
+    .opening-statement {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+        border-left-width: 3px;
+    }
+    
+    .philosophy-blocks {
+        gap: 22px;
+    }
+    
+    .philosophy-block {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 18px;
+    }
+    
+    .philosophy-block::before {
+        width: 0 !important;
+    }
+    
+    .philosophy-block::after {
+        height: 0 !important;
+    }
+    
+    .block-icon {
+        align-self: center;
+        margin-bottom: 0;
+        width: 54px;
+        height: 54px;
+        font-size: 1.25rem;
+    }
+    
+    .block-content {
+        width: 100%;
+    }
+    
+    .block-content h4 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .block-content p {
+        text-align: center;
+        line-height: 1.65;
+    }
+}
+
+/* Móviles Large (576px - 480px) */
+@media (max-width: 576px) {
+    .componente-filosofico-section {
+        margin-top: 50px;
+        padding: 2rem 0.8rem;
+    }
+    
+    .filosofia-content {
+        padding: 0 0.3rem;
+    }
+    
+    .content-card {
+        padding: 25px 15px;
+    }
+    
+    .institutional-header {
+        margin-bottom: 25px;
+    }
+    
+    .opening-statement {
+        padding: 22px 18px;
+        margin-bottom: 28px;
+        border-radius: var(--border-radius-md);
+    }
+    
+    .philosophy-blocks {
+        gap: 20px;
+    }
+    
+    .philosophy-block {
+        padding: 22px 18px;
+        gap: 16px;
+    }
+    
+    .block-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+    }
+    
+    .block-content h4 {
+        margin-bottom: 8px;
+    }
+    
+    .block-content p {
+        line-height: 1.6;
+    }
+}
+
+/* Móviles Small (480px - 360px) */
+@media (max-width: 480px) {
+    .componente-filosofico-section {
+        margin-top: 40px;
+        padding: 1.8rem 0.6rem;
+    }
+    
+    .filosofia-content {
+        padding: 0 0.2rem;
+    }
+    
+    .content-card {
+        padding: 20px 12px;
+    }
+    
+    .institutional-header {
+        margin-bottom: 20px;
+    }
+    
+    .opening-statement {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+        border-radius: var(--border-radius-sm);
+    }
+    
+    .philosophy-blocks {
+        gap: 18px;
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-block {
+        padding: 20px 15px;
+        gap: 14px;
+    }
+    
+    .block-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.15rem;
+    }
+    
+    .block-content h4 {
+        margin-bottom: 8px;
+    }
+    
+    .block-content p {
+        line-height: 1.55;
+    }
+}
+
+/* Móviles Extra Small (360px y menores) */
+@media (max-width: 360px) {
+    .componente-filosofico-section {
+        margin-top: 35px;
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .filosofia-content {
+        padding: 0;
+    }
+    
+    .content-card {
+        padding: 18px 10px;
+    }
+    
+    .institutional-header {
+        margin-bottom: 18px;
+    }
+    
+    .opening-statement {
+        padding: 18px 12px;
+        margin-bottom: 22px;
+        border-left-width: 2px;
+    }
+    
+    .philosophy-blocks {
+        gap: 16px;
+    }
+    
+    .philosophy-block {
+        padding: 18px 12px;
+        gap: 12px;
+    }
+    
+    .block-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+    
+    .block-content h4 {
+        margin-bottom: 7px;
+    }
+    
+    .block-content p {
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* ============================================
+   OPTIMIZACIONES ADICIONALES
+============================================ */
+
+/* Mejora de legibilidad en pantallas pequeñas */
+@media (max-width: 768px) {
+    .opening-statement,
+    .block-content p {
+        hyphens: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* Optimización para modo landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .componente-filosofico-section {
+        padding: 1.5rem 1rem;
+        margin-top: 30px;
+    }
+    
+    .content-card {
+        padding: 20px 15px;
+    }
+    
+    .opening-statement {
+        margin-bottom: 20px;
+        padding: 18px 15px;
+    }
+    
+    .philosophy-blocks {
+        gap: 15px;
+    }
+    
+    .philosophy-block {
+        padding: 18px;
+        gap: 15px;
+    }
+    
+    .block-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Accesibilidad táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+    .philosophy-block::before,
+    .philosophy-block::after {
+        transition: none;
+    }
+    
+    .block-icon {
+        transition: none;
+    }
+}
+
+/* Optimización de grid para pantallas muy anchas */
+@media (min-width: 1600px) {
+    .philosophy-blocks {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Ajuste fino para tablets en orientación específica */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+    .philosophy-blocks {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Prevención de desbordamiento horizontal */
+@media (max-width: 576px) {
+    .componente-filosofico-section,
+    .filosofia-content,
+    .content-card,
+    .opening-statement,
+    .philosophy-block {
+        overflow-x: hidden;
+    }
+}
+
+/* Estados hover solo en dispositivos con cursor */
+@media (hover: hover) and (pointer: fine) {
+    .philosophy-block:hover::before {
+        width: 4px;
+    }
+    
+    .philosophy-block:hover::after {
+        height: 2px;
+    }
+    
+    .philosophy-block:hover .block-icon {
+        transform: scale(1.05);
+    }
+}
