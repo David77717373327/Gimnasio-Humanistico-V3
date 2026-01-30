@@ -80,10 +80,6 @@
     <link rel="stylesheet" href="{{ asset('css/welcomee.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footerr.css') }}">
 
-    <!-- ===============================
-         JS
-    ================================ -->
-    <script src="{{ asset('js/welcome.js') }}" defer></script>
 
     <!-- ===============================
          FAVICON
@@ -121,8 +117,6 @@
 }
 </script>
     @endverbatim
-
-
 
 </head>
 
