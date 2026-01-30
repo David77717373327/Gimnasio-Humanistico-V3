@@ -51,9 +51,9 @@
     <script src="{{ asset('js/hero.js') }}"></script>
 
     <!-- CSS personalizado -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/principios_y_valores.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 
@@ -81,12 +81,12 @@
 
     <!-- ENCABEZADO GLOBAL -->
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <!-- MENÚ PRINCIPAL -->
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <!-- CONTENIDO PRINCIPAL DEL SITIO -->
@@ -312,7 +312,7 @@
 
     <!-- Footer -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
     <!-- Scripts -->

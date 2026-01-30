@@ -31,9 +31,9 @@
     <script src="{{ asset('js/hero.js') }}" defer></script>
 
     <!-- CSS -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/organigrama.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 
@@ -68,12 +68,12 @@
 
     <!-- ENCABEZADO -->
     <header class="header-top" aria-label="Encabezado principal">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <!-- NAVEGACIÓN PRINCIPAL -->
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <!-- CONTENIDO -->
@@ -165,7 +165,7 @@
 
     <!-- PIE DE PÁGINA -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
 

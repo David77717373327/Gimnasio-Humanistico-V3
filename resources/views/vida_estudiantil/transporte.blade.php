@@ -23,9 +23,9 @@
 
 
     <!-- CSS personalizado -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/transporte.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
 
 
@@ -61,11 +61,11 @@
 
 <body>
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <main id="main" role="main">
@@ -123,7 +123,7 @@
     </section>
 
     <!-- Incluir el footer -->
-    @include('layouts.footer')
+    @include('layouts.footerr')
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

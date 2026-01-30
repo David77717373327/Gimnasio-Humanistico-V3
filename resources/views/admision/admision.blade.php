@@ -25,9 +25,9 @@ content="Conoce el proceso de admisiones en Neiva del Gimnasio Humanístico del 
     <script src="{{ asset('js/hero.js') }}" defer></script>
 
     <!-- CSS personalizado -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admision.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
 
     <!-- Canonical URL -->
@@ -87,11 +87,11 @@ content="Conoce el proceso de admisiones en Neiva del Gimnasio Humanístico del 
 <body>
 
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <main id="main" aria-label="Contenido principal del proceso de admisiones">
@@ -607,7 +607,7 @@ content="Conoce el proceso de admisiones en Neiva del Gimnasio Humanístico del 
 
     </main>
         <!-- Incluir el footer -->
-        @include('layouts.footer')
+        @include('layouts.footerr')
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

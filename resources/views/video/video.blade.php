@@ -96,10 +96,7 @@
                 Video institucional del Gimnasio Humanístico del Alto Magdalena, institución educativa ubicada en
                 Neiva, Huila, con enfoque en la formación integral y humanística.
             </figcaption>
-
         </figure>
-
     </main>
-
 </body>
 </html>

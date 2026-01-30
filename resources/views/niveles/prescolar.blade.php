@@ -30,9 +30,9 @@ content="Preescolar en Neiva con enfoque humanista. Educación inicial basada en
 
 
     <!-- CSS -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prescolar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/galeria.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
 
@@ -64,11 +64,11 @@ content="Preescolar en Neiva con enfoque humanista. Educación inicial basada en
 <body>
 
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <main id="main" role="main">
@@ -269,7 +269,7 @@ content="Preescolar en Neiva con enfoque humanista. Educación inicial basada en
         </section>
 
         <footer aria-label="Pie de página">
-            @include('layouts.footer')
+            @include('layouts.footerr')
         </footer>
     </main>
 

@@ -16,9 +16,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logo.png') }}">
     <!-- CSS personalizado -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/docentes.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 
@@ -56,11 +56,11 @@
 
 
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <nav class="nav-sticky" aria-label="Navegación principal del sitio">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <main>
@@ -110,7 +110,7 @@
 
 
         <footer aria-label="Pie de página institucional">
-            @include('layouts.footer')
+            @include('layouts.footerr')
         </footer>
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

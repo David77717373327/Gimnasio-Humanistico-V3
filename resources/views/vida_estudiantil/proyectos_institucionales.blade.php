@@ -34,9 +34,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/logo.png') }}">
     <!-- CSS personalizado -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/proyectos_de_vida.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/proyectos_de_vidaa.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
 
 
@@ -76,12 +76,12 @@
 <body>
 
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header') <!-- AQUÍ SOLO LOGO, TITULO -->
+        @include('layouts.headerr') <!-- AQUÍ SOLO LOGO, TITULO -->
     </header>
 
 
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation') <!-- AQUÍ SOLO EL MENU -->
+        @include('layouts.navigationn') <!-- AQUÍ SOLO EL MENU -->
     </nav>
 
     <!-- Contenido principal -->
@@ -347,7 +347,7 @@
 
     <!-- Footer del sitio -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
     <!-- Scripts -->

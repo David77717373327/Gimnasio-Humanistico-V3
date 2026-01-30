@@ -39,9 +39,9 @@
 
 
     <!-- CSS personalizado -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/quienes_somos.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 
@@ -69,11 +69,11 @@
 <body>
 
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header') <!-- AQUÍ SOLO LOGO, TITULO -->
+        @include('layouts.headerr') <!-- AQUÍ SOLO LOGO, TITULO -->
     </header>
 
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation') <!-- AQUÍ SOLO EL MENU -->
+        @include('layouts.navigationn') <!-- AQUÍ SOLO EL MENU -->
     </nav>
 
     <!-- Contenido principal -->
@@ -563,7 +563,7 @@
 
     <!-- Footer del sitio -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
     

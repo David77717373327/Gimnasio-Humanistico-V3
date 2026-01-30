@@ -34,9 +34,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/logo.png') }}">
 
     <!-- CSS -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/eventos_celebraciones.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/eventos_celebracioness.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
 
     <!-- JS -->
@@ -73,11 +73,11 @@
 <body>
 
     <header class="header-top" aria-label="Encabezado principal del sitio">
-        @include('layouts.header') <!-- AQUÍ SOLO LOGO, TITULO -->
+        @include('layouts.headerr') <!-- AQUÍ SOLO LOGO, TITULO -->
     </header>
 
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation') <!-- AQUÍ SOLO EL MENU -->
+        @include('layouts.navigationn') <!-- AQUÍ SOLO EL MENU -->
     </nav>
 
     <!-- Contenido principal -->
@@ -586,7 +586,7 @@ window.scrollTabIntoView = scrollTabIntoView;
 
     <!-- Footer del sitio -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

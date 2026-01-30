@@ -49,9 +49,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/logo.png') }}">
 
     <!-- CSS -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/grupohumanistico.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 
@@ -108,12 +108,12 @@
 
     <!-- ENCABEZADO -->
     <header class="header-top" aria-label="Encabezado principal">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <!-- NAVEGACIÓN PRINCIPAL -->
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <main id="contenido-principal">
@@ -175,7 +175,7 @@
 
     <!-- PIE DE PÁGINA -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
     <!-- Scripts -->

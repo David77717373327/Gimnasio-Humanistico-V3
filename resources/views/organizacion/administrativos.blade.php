@@ -38,9 +38,9 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logo.png') }}">
 
     <!-- 🎨 CSS -->
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/administrativos.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
 
@@ -78,12 +78,12 @@
 
     <!-- Header -->
     <header class="header-top" aria-label="Encabezado institucional">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <!-- Navegación -->
     <nav class="nav-sticky" aria-label="Navegación principal">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -318,7 +318,7 @@
 
     <!-- FOOTER -->
     <footer aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
     <!-- SCRIPTS -->
