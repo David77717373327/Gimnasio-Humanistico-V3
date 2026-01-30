@@ -76,9 +76,9 @@
     <!-- ===============================
          CSS PROPIO
     ================================ -->
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/headerr.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/welcomee.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footerr.css') }}">
 
     <!-- ===============================
          JS
@@ -132,12 +132,12 @@
 
     <!-- Header Principal -->
     <header class="header-top" role="banner" aria-label="Encabezado principal del sitio">
-        @include('layouts.header')
+        @include('layouts.headerr')
     </header>
 
     <!-- Navegación Principal -->
     <nav class="nav-sticky" role="navigation" aria-label="Navegación principal del sitio">
-        @include('layouts.navigation')
+        @include('layouts.navigationn')
     </nav>
 
     <!-- Contenido Principal -->
@@ -1094,7 +1094,7 @@
 
     <!-- Footer -->
     <footer role="contentinfo" aria-label="Pie de página del sitio">
-        @include('layouts.footer')
+        @include('layouts.footerr')
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
