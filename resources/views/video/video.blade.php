@@ -88,7 +88,7 @@
                 preload="metadata"
                 poster="{{ asset('images/video-poster.jpg') }}"
             >
-                <source src="{{ asset('videos/hero-background9.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/video-colegio.mp4') }}" type="video/mp4">
                 Tu navegador no soporta la reproducción de video HTML5.
             </video>
 

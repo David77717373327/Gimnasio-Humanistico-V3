@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo Administrativo | Gimnasio Humanístico del Alto Magdalena - Neiva</title>
-    
+
     <!-- 📝 META DESCRIPTION (SEO) -->
     <meta name="description"
         content="Conoce al equipo administrativo del Gimnasio Humanístico: Jefe Administrativo, Contador, Secretaria Académica, Pagador-Tesorero, Maestra de Apoyo y Servicios Generales. Profesionales que garantizan calidad, transparencia y bienestar institucional.">
@@ -20,14 +20,15 @@
 
     <!-- 🌐 OPEN GRAPH (SEO PARA REDES SOCIALES) -->
     <meta property="og:title" content="Equipo Administrativo | Gimnasio Humanístico">
-    <meta property="og:description" content="Conoce al equipo administrativo del Gimnasio Humanístico. Profesionales que garantizan la excelencia institucional.">
+    <meta property="og:description"
+        content="Conoce al equipo administrativo del Gimnasio Humanístico. Profesionales que garantizan la excelencia institucional.">
     <meta property="og:image" content="{{ asset('images/politica_de_calidad2.webp') }}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CO">
     <meta property="og:url" content="https://gimnasiohumanisticoaltomagdalena.com/administrativos">
     <meta property="og:site_name" content="Gimnasio Humanístico del Alto Magdalena">
 
-    
+
 
 
     <!-- 🎨 Bootstrap y Font Awesome -->
@@ -48,7 +49,7 @@
     <script src="{{ asset('js/hero.js') }}" defer></script>
 
     @verbatim
-    <script type="application/ld+json">
+        <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -70,7 +71,7 @@
   ]
 }
 </script>
-@endverbatim
+    @endverbatim
 
 </head>
 
@@ -105,7 +106,7 @@
                         Equipo Administrativo
                     </h1>
 
-                     <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
+                    <div class="hero-scroll-indicator" onclick="scrollToContent()" role="button" tabindex="0"
                         aria-label="Desplazarse a la siguiente sección"
                         onkeypress="if(event.key==='Enter')scrollToContent()">
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
@@ -133,18 +134,24 @@
                             <div class="flip-card-front" aria-hidden="false">
                                 <div class="card-logo">
                                     <img src="{{ asset('images/jefe_administracion.png') }}"
-                                        alt="Contador del Gimnasio Humanístico del Alto Magdalena">
+                                        alt="Jefe Administrativo del Gimnasio Humanístico del Alto Magdalena">
                                 </div>
                                 <h4 class="front-title">Jefe Administrativo</h4>
                                 <p class="front-subtitle">Liderazgo Operativo</p>
+                                <div class="ver-mas-btn">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
 
                             <div class="flip-card-back" aria-hidden="true">
+                                <button class="cerrar-btn" aria-label="Cerrar">
+                                    <i class="fas fa-times"></i>
+                                </button>
                                 <h5 class="back-title">Funciones del Jefe Administrativo</h5>
                                 <p class="back-description">
-                                     Lidera la planificación operativa (presupuesto, compras, infraestructura) alineada 
-                                con las directrices de la Rectoría. Supervisa y articula el trabajo del personal 
-                                administrativo (Contaduría, Pagaduría, Servicios Generales, Secretaría).
+                                    Lidera la planificación operativa (presupuesto, compras, infraestructura) alineada
+                                    con las directrices de la Rectoría. Supervisa y articula el trabajo del personal
+                                    administrativo (Contaduría, Pagaduría, Servicios Generales, Secretaría).
                                 </p>
                             </div>
                         </div>
@@ -168,15 +175,22 @@
                                 </div>
                                 <h4 class="front-title">Contador</h4>
                                 <p class="front-subtitle">Rigor Financiero</p>
+                                <div class="ver-mas-btn">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
 
                             <div class="flip-card-back">
+                                <button class="cerrar-btn" aria-label="Cerrar">
+                                    <i class="fas fa-times"></i>
+                                </button>
                                 <h5 class="back-title">Funciones del Contador</h5>
                                 <p class="back-description">
-                                Es el profesional responsable del rigor contable y la transparencia financiera, 
-                                esencial para la toma de decisiones estratégicas. Es experto en NIIF y en la 
-                                legislación tributaria colombiana, garantizando la veracidad, exactitud y oportunidad 
-                                de todos los informes contables.
+                                    Es el profesional responsable del rigor contable y la transparencia financiera,
+                                    esencial para la toma de decisiones estratégicas. Es experto en NIIF y en la
+                                    legislación tributaria colombiana, garantizando la veracidad, exactitud y
+                                    oportunidad
+                                    de todos los informes contables.
                                 </p>
                             </div>
                         </div>
@@ -200,14 +214,21 @@
                                 </div>
                                 <h4 class="front-title">Secretaría Académica</h4>
                                 <p class="front-subtitle">Gestión Académica</p>
+                                <div class="ver-mas-btn">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
 
                             <div class="flip-card-back">
+                                <button class="cerrar-btn" aria-label="Cerrar">
+                                    <i class="fas fa-times"></i>
+                                </button>
                                 <h5 class="back-title">Funciones de la Secretaría Académica</h5>
                                 <p class="back-description">
-                                    Es la depositaria y responsable de la información académica, procesos de matrícula 
-                                y demás funciones afines que le asigne la rectoría y el primer punto de contacto 
-                                para la comunidad, requiere precisión técnica, confidencialidad, y alta calidad humana.
+                                    Es la depositaria y responsable de la información académica, procesos de matrícula
+                                    y demás funciones afines que le asigne la rectoría y el primer punto de contacto
+                                    para la comunidad, requiere precisión técnica, confidencialidad, y alta calidad
+                                    humana.
                                 </p>
                             </div>
 
@@ -232,13 +253,19 @@
                                 </div>
                                 <h4 class="front-title">Pagador - Tesorero</h4>
                                 <p class="front-subtitle">Gestión Financiera</p>
+                                <div class="ver-mas-btn">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
 
                             <div class="flip-card-back">
+                                <button class="cerrar-btn" aria-label="Cerrar">
+                                    <i class="fas fa-times"></i>
+                                </button>
                                 <h5 class="back-title">Funciones del Pagador-Tesorero</h5>
                                 <p class="back-description">
-                                     Ejecuta las transacciones financieras con máxima exactitud y puntualidad. Es garante 
-                                de la seguridad en el manejo del flujo de caja y la documentación de soporte.
+                                    Ejecuta las transacciones financieras con máxima exactitud y puntualidad. Es garante
+                                    de la seguridad en el manejo del flujo de caja y la documentación de soporte.
                                 </p>
                             </div>
 
@@ -263,16 +290,25 @@
                                 </div>
                                 <h4 class="front-title">Maestra de Apoyo</h4>
                                 <p class="front-subtitle">Inclusión Educativa</p>
+                                <div class="ver-mas-btn">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
 
                             <div class="flip-card-back">
+                                <button class="cerrar-btn" aria-label="Cerrar">
+                                    <i class="fas fa-times"></i>
+                                </button>
                                 <h5 class="back-title">Funciones de la Maestra de Apoyo</h5>
                                 <p class="back-description">
-                                   Es el experto técnico que materializa la inclusión educativa, trabajando como docente 
-                                y consultor para la flexibilidad curricular. Posee un profundo conocimiento del Diseño 
-                                Universal de Aprendizaje DUA y del Decreto 1421/2017. Es el experto en el diseño e 
-                                implementación de los Planes Individuales de Ajustes Razonables PIAR y la flexibilidad 
-                                curricular.
+                                    Es el experto técnico que materializa la inclusión educativa, trabajando como
+                                    docente
+                                    y consultor para la flexibilidad curricular. Posee un profundo conocimiento del
+                                    Diseño
+                                    Universal de Aprendizaje DUA y del Decreto 1421/2017. Es el experto en el diseño e
+                                    implementación de los Planes Individuales de Ajustes Razonables PIAR y la
+                                    flexibilidad
+                                    curricular.
                                 </p>
                             </div>
                         </div>
@@ -296,16 +332,24 @@
                                 </div>
                                 <h4 class="front-title">Servicios Generales</h4>
                                 <p class="front-subtitle">Bienestar y Seguridad</p>
+                                <div class="ver-mas-btn">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
 
                             <div class="flip-card-back">
+                                <button class="cerrar-btn" aria-label="Cerrar">
+                                    <i class="fas fa-times"></i>
+                                </button>
                                 <h5 class="back-title">Funciones de Servicios Generales</h5>
                                 <p class="back-description">
-                                   Es el equipo garante de la salud, seguridad y habitabilidad de la institución, 
-                                fundamental para el bienestar de toda la comunidad. Garantizan la higiene y salubridad 
-                                de todas las áreas, actuando de manera proactiva en la prevención de riesgos sanitarios. 
-                                Mantiene los estándares de orden y limpieza requeridos para un ambiente educativo de 
-                                calidad.
+                                    Es el equipo garante de la salud, seguridad y habitabilidad de la institución,
+                                    fundamental para el bienestar de toda la comunidad. Garantizan la higiene y
+                                    salubridad
+                                    de todas las áreas, actuando de manera proactiva en la prevención de riesgos
+                                    sanitarios.
+                                    Mantiene los estándares de orden y limpieza requeridos para un ambiente educativo de
+                                    calidad.
                                 </p>
                             </div>
                         </div>
@@ -313,7 +357,6 @@
                 </article>
             </div>
         </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -321,8 +364,77 @@
         @include('layouts.footerr')
     </footer>
 
+
+
+
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        // ============================================
+        // FLIP CARDS - INTERACCIÓN TÁCTIL Y HOVER
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const flipCards = document.querySelectorAll('.flip-card');
+
+            // Detectar si el dispositivo soporta touch
+            const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+            flipCards.forEach(card => {
+                if (isTouchDevice) {
+                    // MODO TÁCTIL (Móviles/Tablets)
+                    card.addEventListener('click', function(e) {
+                        // Evitar que el botón de cerrar active el flip
+                        if (e.target.closest('.cerrar-btn')) {
+                            return;
+                        }
+
+                        e.preventDefault();
+
+                        // Si esta card ya está volteada, la cerramos
+                        if (this.classList.contains('flipped')) {
+                            this.classList.remove('flipped');
+                        } else {
+                            // Cerrar todas las demás cards
+                            flipCards.forEach(otherCard => {
+                                if (otherCard !== this) {
+                                    otherCard.classList.remove('flipped');
+                                }
+                            });
+
+                            // Voltear esta card
+                            this.classList.add('flipped');
+                        }
+                    });
+
+                    // Botón de cerrar
+                    const cerrarBtn = card.querySelector('.cerrar-btn');
+                    if (cerrarBtn) {
+                        cerrarBtn.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            card.classList.remove('flipped');
+                        });
+                    }
+                }
+                // Para dispositivos de escritorio con hover, el CSS ya maneja la interacción
+            });
+
+            // Cerrar cards al hacer click fuera de ellas (solo en móviles)
+            if (isTouchDevice) {
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.flip-card')) {
+                        flipCards.forEach(card => {
+                            card.classList.remove('flipped');
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

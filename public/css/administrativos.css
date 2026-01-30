@@ -157,12 +157,15 @@ body {
     min-height: 45px;
 }
 
-/* FLIP CARD */
+/* =============================================
+   FLIP CARD - DESKTOP (HOVER)
+============================================= */
 .flip-card {
     perspective: 1000px;
     height: 400px;
     width: 100%;
     cursor: pointer;
+    position: relative;
 }
 
 .flip-card-inner {
@@ -173,7 +176,23 @@ body {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+/* HOVER para DESKTOP */
+@media (hover: hover) and (pointer: fine) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card:hover .flip-card-front {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .flip-card:hover .card-logo img {
+        transform: scale(1.1);
+    }
+}
+
+/* CLICK/TAP para MÓVILES y TABLETS */
+.flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -216,10 +235,6 @@ body {
     height: 85%;
     object-fit: contain;
     transition: transform 0.3s ease;
-}
-
-.flip-card:hover .card-logo img {
-    transform: scale(1.1);
 }
 
 /* Jefe de Administración */
@@ -300,10 +315,6 @@ body {
     border: 1px solid var(--medium-gray);
 }
 
-.flip-card:hover .flip-card-front {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 .front-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
@@ -331,6 +342,88 @@ body {
     font-weight: 500;
 }
 
+/* Botón "Ver más" mejorado */
+.ver-mas-btn {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 24px;
+    background: white;
+    border: 2px solid currentColor;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ver-mas-btn i {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+/* Hover effect para desktop */
+@media (hover: hover) and (pointer: fine) {
+    .flip-card:hover .ver-mas-btn {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .flip-card:hover .ver-mas-btn i {
+        transform: translateX(3px);
+    }
+}
+
+/* Colores específicos para cada botón según el rol */
+.equipo-column:nth-child(1) .ver-mas-btn {
+    color: var(--jefe-color);
+}
+
+.equipo-column:nth-child(2) .ver-mas-btn {
+    color: var(--contador-color);
+}
+
+.equipo-column:nth-child(3) .ver-mas-btn {
+    color: var(--secretaria-color);
+}
+
+.equipo-column:nth-child(4) .ver-mas-btn {
+    color: var(--pagador-color);
+}
+
+.equipo-column:nth-child(5) .ver-mas-btn {
+    color: var(--apoyo-color);
+}
+
+.equipo-column:nth-child(6) .ver-mas-btn {
+    color: var(--servicios-color);
+}
+
+/* Animación pulsante para llamar la atención en móviles */
+@media (hover: none) and (pointer: coarse) {
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+    
+    .ver-mas-btn {
+        animation: pulse 2s ease-in-out infinite;
+    }
+    
+    .flip-card.flipped .ver-mas-btn {
+        animation: none;
+    }
+}
+
 /* BACK */
 .flip-card-back {
     transform: rotateY(180deg);
@@ -338,6 +431,39 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+/* Botón de cerrar en el reverso (solo móviles) */
+.cerrar-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.cerrar-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Mostrar botón de cerrar solo en móviles */
+@media (hover: none) and (pointer: coarse) {
+    .cerrar-btn {
+        display: flex;
+    }
 }
 
 .back-title {
@@ -460,6 +586,12 @@ body {
         font-size: 0.78rem;
     }
 
+    .ver-mas-btn {
+        bottom: 18px;
+        padding: 9px 22px;
+        font-size: 0.8rem;
+    }
+
     .flip-card-back {
         padding: 1.9rem 1.65rem;
     }
@@ -499,6 +631,7 @@ body {
 
     .flip-card {
         height: 380px;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .card-logo {
@@ -519,8 +652,15 @@ body {
         font-size: 0.76rem;
     }
 
+    .ver-mas-btn {
+        bottom: 16px;
+        padding: 8px 20px;
+        font-size: 0.78rem;
+    }
+
     .flip-card-back {
         padding: 1.75rem 1.5rem;
+        -webkit-overflow-scrolling: touch;
     }
 
     .back-title {
@@ -531,6 +671,16 @@ body {
     .back-description {
         font-size: 0.88rem;
         line-height: 1.7;
+    }
+
+    /* Optimización de rendimiento para móviles */
+    .flip-card-inner {
+        transition: transform 0.6s;
+    }
+
+    .card-logo,
+    .card-logo img {
+        transition: all 0.2s ease-out;
     }
 }
 
@@ -588,6 +738,13 @@ body {
         bottom: 18px;
         font-size: 0.74rem;
         gap: 5px;
+    }
+
+    .ver-mas-btn {
+        bottom: 14px;
+        padding: 8px 18px;
+        font-size: 0.75rem;
+        gap: 6px;
     }
 
     .flip-card-back {
@@ -665,6 +822,13 @@ body {
         bottom: 16px;
     }
 
+    .ver-mas-btn {
+        bottom: 12px;
+        padding: 7px 16px;
+        font-size: 0.72rem;
+        gap: 5px;
+    }
+
     .flip-card-back {
         padding: 1.5rem 1.2rem;
     }
@@ -724,6 +888,13 @@ body {
     .hover-hint {
         font-size: 0.7rem;
         bottom: 15px;
+    }
+
+    .ver-mas-btn {
+        bottom: 11px;
+        padding: 7px 15px;
+        font-size: 0.7rem;
+        gap: 5px;
     }
 
     .flip-card-back {
@@ -794,6 +965,13 @@ body {
         gap: 4px;
     }
 
+    .ver-mas-btn {
+        bottom: 10px;
+        padding: 6px 14px;
+        font-size: 0.68rem;
+        gap: 4px;
+    }
+
     .flip-card-back {
         padding: 1.2rem 1rem;
     }
@@ -853,6 +1031,12 @@ body {
         font-size: 0.7rem;
     }
 
+    .ver-mas-btn {
+        bottom: 12px;
+        padding: 7px 16px;
+        font-size: 0.7rem;
+    }
+
     .flip-card-back {
         padding: 1.3rem 1.1rem;
     }
@@ -867,85 +1051,3 @@ body {
         line-height: 1.55;
     }
 }
-
-/* =============================================
-   INTERACCIÓN TÁCTIL PARA MÓVILES
-============================================= */
-@media (max-width: 768px) {
-    /* Deshabilitar hover y habilitar tap */
-    .flip-card:hover .flip-card-inner {
-        transform: none;
-    }
-    
-    .flip-card.flipped .flip-card-inner {
-        transform: rotateY(180deg);
-    }
-
-    /* Mejorar área táctil */
-    .flip-card {
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    /* Optimizar scroll */
-    .flip-card-back {
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Efecto hover deshabilitado en móviles */
-    .flip-card:hover .flip-card-front {
-        box-shadow: none;
-    }
-
-    .flip-card:hover .card-logo img {
-        transform: scale(1);
-    }
-}
-
-/* =============================================
-   OPTIMIZACIÓN DE RENDIMIENTO MÓVIL
-============================================= */
-@media (max-width: 768px) {
-    .flip-card-inner {
-        transition: transform 0.6s;
-    }
-
-    .card-logo,
-    .card-logo img {
-        transition: all 0.2s ease-out;
-    }
-
-    .flip-card-front {
-        transition: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
