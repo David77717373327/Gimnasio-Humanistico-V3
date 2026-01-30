@@ -40,7 +40,7 @@
 
     <!-- 🎨 CSS -->
     <link href="{{ asset('css/headerr.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/administrativos.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/administrativoss.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footerr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hero.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navegacion.css') }}" rel="stylesheet">
