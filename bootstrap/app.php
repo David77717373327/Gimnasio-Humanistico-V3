@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\CheckRole;
+use App\Http\Middleware\NoCacheMiddleware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -13,9 +14,15 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-       $middleware->alias([
-        'role' => CheckRole::class,
-    ]);
+        // Alias de middleware
+        $middleware->alias([
+            'role' => CheckRole::class,
+        ]);
+        
+        // Agregar middleware anti-caché a todas las rutas web
+        $middleware->web(append: [
+            NoCacheMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
